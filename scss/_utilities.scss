@@ -1,16 +1,27 @@
+// font
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+footer{
+  height: 50vh;
+}
+
 // Variables 
-
+$font: 'Montserrat', sans-serif;
 $columns: 12;
-$primary-color: #007bc3;
-$secondary-color: #222;
+$primary-color: #490048;
+$primary-light-color: #5D005B;
+$secondary-color: #817E9F;
 
+
+body{
+  font-family: $font;
+  font-size: 16px;
+}
 // Gird system
 .container {
   width: 100% - 10%;
   // max-width: 1200px;
-  background-color: lightblue;
   margin: 0 auto;
-  overflow: auto;
 }
 .row {
   display: flex;
@@ -19,8 +30,11 @@ $secondary-color: #222;
 .col {
   flex: 1 0 0%;
 }
+.text-center{
+  text-align: center;
+}
 //default col
-@for $i from 1 through $columns {
+@for $i from 0 through $columns {
   .col-#{$i} {
     flex: 0 0 100% / $columns * $i;
   }
@@ -32,7 +46,7 @@ $secondary-color: #222;
 // // Small devices (landscape phones, 576px and up)
 
 @include responsive($sm) {
-  @for $i from 1 through $columns {
+  @for $i from 0 through $columns {
     .col-sm-#{$i} {
       flex: 0 0 100% / $columns * $i;
     }
@@ -44,7 +58,7 @@ $secondary-color: #222;
 
 // Medium devices (tablets, 768px and up)
 @include responsive($md) {
-  @for $i from 1 through $columns {
+  @for $i from 0 through $columns {
     .col-md-#{$i} {
       flex: 0 0 100% / $columns * $i;
     }
@@ -56,7 +70,7 @@ $secondary-color: #222;
 
 // Large devices (desktops, 992px and up)
 @include responsive($lg) {
-  @for $i from 1 through $columns {
+  @for $i from 0 through $columns {
     .col-lg-#{$i} {
       flex: 0 0 100% / $columns * $i;
     }
@@ -68,7 +82,7 @@ $secondary-color: #222;
 
 // Extra large devices (large desktops, 1200px and up)
 @include responsive($xl) {
-  @for $i from 1 through $columns {
+  @for $i from 0 through $columns {
     .col-xl-#{$i} {
       flex: 0 0 100% / $columns * $i;
     }
@@ -111,4 +125,9 @@ $secondary-color: #222;
   background: transparent;
   color: $primary-color;
   border-color: $primary-color;
+}
+.btn-outline-secondary {
+  background: transparent;
+  color: #fff;
+  border-color: #fff;
 }

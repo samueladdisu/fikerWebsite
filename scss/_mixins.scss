@@ -2,7 +2,140 @@ $sm: 576px;
 $md: 768px;
 $lg: 992px;
 $xl: 1200px;
+$xxl: 1920px;
 
+
+//header 
+@mixin header($class,$img,$height) {
+   .#{$class}-header{
+      position: relative;
+      height: $height;
+    }
+    .#{$class}-banner{
+      height: 100%;
+      width: 100%;
+      z-index: 999;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.58) #{$img} no-repeat;
+      background-position:  center center;
+      background-size: cover;
+      background-blend-mode: overlay;
+    }
+    .ham{
+      color: #fff;
+      font-size: 2rem;
+    }
+    .black{
+      color: #000;
+    }
+    nav{
+      position: relative;
+      transition: all 0.3s linear;
+      padding-bottom: 0.5rem;
+      z-index: 999999;
+      .container{
+        .nav-header{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-top: 1.94rem;
+          position: relative;
+          .logo{
+            width: 7rem;
+            position: absolute;
+            top: 0;
+          }
+          
+        }
+        @include responsive($md){
+          .nav-header{
+            display: flex;
+            top: 0;
+            .logo{
+              flex: 1;
+              width: 16rem;
+              top: 0;
+            }
+            .ham{
+              font-size: 4rem;
+            }
+            
+          }
+        }
+        
+      }
+    }
+    .links-container{
+      background: #fff;
+      height: 0;
+      overflow: hidden;
+      transition: all 0.3s linear;
+      .nav-links{
+        li{
+        padding: 0.75rem 1rem;
+        
+        }
+      }
+    }
+    .show-links{
+      height: auto !important;
+    }
+    .fixed-nav{
+      background-color: #fff;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      z-index: 999999;
+    }
+    @include responsive($xl){
+        .nav{
+          padding-top: 1.94rem;
+          .container{
+            display: flex;
+            align-items: center;
+            .nav-header{
+              flex: 1;
+              padding: 0;
+              .menu{
+                display: none;
+              }
+
+            }
+            .links-container{
+              flex: 1;
+              background: transparent;
+              height: auto;
+              .nav-links{
+                display: flex;
+                justify-content: space-between;
+                li{
+                  a{
+                    color: #fff;
+                    transition: all .3s linear;
+                    &:hover{
+                      color: $primary-color;
+                    }
+                    &:active{
+                      color: $primary-color;
+                    }
+                  }
+                  .black{
+                    color: #000;
+                  }
+                }
+                
+              }
+              
+            }
+          }
+      }
+  }
+}
 
 @mixin responsive($screen-size){
    @if $screen-size == $sm {
@@ -21,7 +154,12 @@ $xl: 1200px;
       @media screen and (min-width: $screen-size){
          @content;
       }
-   }@else {
+   }@else if $screen-size == $xxl {
+      @media screen and (min-width: $screen-size){
+         @content;
+      }
+   }
+   @else {
       @error "#{$screen-size} is Invalid screen size";
    }
 }
