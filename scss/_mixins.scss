@@ -6,7 +6,7 @@ $xxl: 1920px;
 
 
 //header 
-@mixin header($class,$img,$height) {
+@mixin header($class,$img,$height,$opacity) {
    .#{$class}-header{
       position: relative;
       height: $height;
@@ -19,7 +19,7 @@ $xxl: 1920px;
       top: 0;
       bottom: 0;
       right: 0;
-      background: rgba(0, 0, 0, 0.58) #{$img} no-repeat;
+      background: #{$opacity} #{$img} no-repeat;
       background-position:  center center;
       background-size: cover;
       background-blend-mode: overlay;

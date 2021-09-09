@@ -1,8 +1,9 @@
 @import "reboot";
 @import "mixins";
 @import "utilities";
+@import "about";
 
-@include header(home, url('../img/court.jpg'),90vh);
+@include header(home, url('../img/court.jpg'),90vh, rgba(0,0,0,0.58));
 .hero{
   height: 100%;
   width: 100%;
@@ -36,11 +37,13 @@
 @include responsive($md){
   .headline{
     .subtitle{
-      font-size: 2.25rem;
+      font-size: 1.5rem;
+      width: 35rem;
     }
     .title{
-      font-size: 4rem;
-      width: 38.13rem;
+      font-size: 3rem;
+      width: 80%;
+      max-width: 62.44rem;
     }
     a{
       font-size: 1.15rem;
@@ -53,12 +56,12 @@
   .headline{
     
     .title{
-      font-size: 3.25rem;
-      width: 62.44rem;
+      font-size: 3rem;
+      width: 90%;
     }
     .subtitle{
       font-size: 1.38rem;
-      width: 54.06rem;
+      width: 80%;
     }
   }
 }
@@ -83,6 +86,7 @@
     width: 21.38rem;
   }
   .container{
+    max-width: 88.88rem;
     .about-img{
       margin-bottom: 3.56rem;
       img{
@@ -94,13 +98,34 @@
       margin: 0 auto;
       line-height: 2.44rem;
       padding-bottom: 3.56rem;
+      text-align: center;
       p{
         margin-bottom: 3.56rem;
       }
     }
   }
 }
+@include responsive($md){
+  .about{
+    .container{
+      .about-text{
+        width: 100%;
+        p{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
 
+@include responsive($lg){
+  .about{
+    .about-title{
+      font-size: 2.25rem;
+      width: auto;
+    }
+  }
+}
 .practice-areas{
   position: relative;
   padding-bottom: 11.3rem;
@@ -120,6 +145,7 @@
     color: $primary-color;
   }
   .container{
+    max-width: 78.88rem;
     .pa-card{
       width: 20.75rem;
       height: 21.5rem;
@@ -146,7 +172,23 @@
     }
   }
 }
+@include responsive($lg){
+  .practice-areas{
+    .container{
+      .pa-card{
+        width: 25.25rem;
+      }
+    }
+  }
+}
 
+@include responsive($xl){
+  .practice-areas{
+    .practice-title{
+      font-size: 2.63rem;
+    }
+  }
+}
 .recognition{
   height: 17.1875rem;
   background: rgba(0,0,0,0.5) url('../img/reco-bg.jpg') no-repeat;
@@ -184,6 +226,7 @@
   }
   .testi-top{
     @extend .absolute;
+    top: 0;
     right: 0;
   }
   .testi-bottom{
@@ -213,6 +256,7 @@
         line-height: 1.875rem;
         text-align: center;
         letter-spacing: -0.005em;
+        max-width: 38.75rem;
       }
       .test-name{
         padding-top: 3rem;
@@ -226,6 +270,7 @@
       }
       .btn-container{
         margin-top: 1.6875rem;
+        margin-bottom: 2rem;
         display: flex;
         gap: 1rem;
       }
@@ -233,13 +278,173 @@
   }
 }
 
+@include responsive($md){
+  .testimonial{
+    .testi-bottom, .testi-top{
+      width: 10rem;
+    }
+  }
+}
+
+@include responsive($lg){
+  .testimonial{
+    .testi-bottom, .testi-top{
+      width: 15rem;
+    }
+  }
+}
+
+@include responsive($xl){
+  .testimonial{
+    .testi-top, .testi-bottom{
+      width: auto;
+    }
+    h2{
+      font-size: 2.63rem;
+    }
+  }
+}
 .consultion{
   height: 52.5rem;
   background: rgba(0, 0, 0, 0.5) url('../img/consult.jpg') no-repeat;
   background-size: cover;
   background-position: center center;
   background-blend-mode: overlay;
+  .container{
+    .form-wrapper{
+      
+      padding: 4.06rem 0;
+      .myform{
+        width: 18.88rem;
+        margin: 0 auto;
+        height: auto;
+        background: #FFFFFF;
+        border-radius: 1.44rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2{
+          font-weight: 600;
+          font-size: 1.75rem;
+          line-height: 1.75rem;
+          letter-spacing: -0.005em;
+          color: $primary-color;
+          text-align: left;
+          padding-left: 2.31rem;
+          margin-top: 1.88rem;
+        }
+        input{
+          margin: 2.81rem 0 1.44rem;
+          padding-bottom: 1.13rem;
+          border: none;
+          border-bottom: 1px solid #B8B8B8;
+        }
+        .textarea{
+          padding-bottom: 8.19rem;
+        }
+        button{
+          margin-bottom: 2.63rem;
+        }
+      }
+    }
+  }
 }
+
+@include responsive($md){
+  .consultion{
+    .container{
+      .form-wrapper{
+        .myform{
+          width: 37.38rem;
+          input{
+            width: 32.19rem;
+          }
+        }
+      }
+    }
+  }
+}
+footer{
+  background: $primary-color;
+  color: rgb(228, 228, 228);
+  .container{
+    padding-top: 2.5rem;
+    h2{
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 3rem 0;
+    }
+    ul{
+      li{
+        margin-bottom: 1.5rem;
+        a{
+          color:rgb(228, 228, 228);
+        }
+      }
+    }
+    .about-footer{
+      margin-bottom: 4.06rem;
+      .footer-logo{
+        width: 7rem;
+        margin-bottom: 2.25rem;
+      }
+      p{
+        font-size: 1rem;
+        line-height: 1.5rem;
+        letter-spacing: 0.045em;
+        margin-bottom: 2.25rem;
+        max-width: 22.19rem;
+      }
+      .footer-social{
+        display: flex;
+        gap: 2rem;
+      }
+    }
+    .contact-info{
+      .contact-box{
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        .contact-info-text{
+          width: 12.69rem;
+          p{
+            margin-bottom: 0.88rem;
+            line-height: 1.25rem;
+            a{
+              color: rgb(228, 228, 228);
+            }
+          }
+        }
+      }
+    }
+  }
+  .copyright{
+    font-size: 0.88rem;
+    text-align: center;
+    width: 14.19rem;
+    margin: 0 auto;
+    color: #d7d7d7;
+    padding-bottom: 1.63rem;
+    padding-top: 3.5rem;  
+    a{
+      color: #d7d7d7;
+    }
+  }
+}
+
+
+@include responsive($md){
+  footer{
+    
+    .copyright{
+      width: auto;
+    }
+  }
+}
+
+
+
 
 
 

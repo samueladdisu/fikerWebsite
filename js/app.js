@@ -41,7 +41,7 @@ const paContainer = document.querySelector('.practice-areas .container')
 
 const paInner = practiceAreas.map(item =>{
     if(item.id === 5){
-        return `<div class=" col-md-6 col-md-offset-3 col-lg-offset-0 col-lg-4">
+        return `<div class=" col-md-6 col-md-offset-3 col-xl-offset-0 col-xl-4">
                 <div class="pa-card">
                 <img src="${item.img}" alt="">
                 <h2 class="pa-card-title">
@@ -54,7 +54,7 @@ const paInner = practiceAreas.map(item =>{
                 </div>
             </div>`
     }else if(item.id === 4){
-        return `<div class=" col-md-6 col-lg-4 col-lg-offset-2">
+        return `<div class=" col-md-6 col-xl-4 col-xl-offset-2">
                 <div class="pa-card">
                 <img src="${item.img}" alt="">
                 <h2 class="pa-card-title">
@@ -67,7 +67,7 @@ const paInner = practiceAreas.map(item =>{
                 </div>
             </div>`
     }else{
-        return `<div class=" col-md-6 col-lg-4">
+        return `<div class=" col-md-6 col-xl-4">
         <div class="pa-card">
            <img src="${item.img}" alt="">
            <h2 class="pa-card-title">
