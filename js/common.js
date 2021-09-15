@@ -16,9 +16,14 @@ function head(bannerClass){
        <div class="links-container">
          <ul class="nav-links">
            <li><a href="./about.html" class="scroll-link">About us</a></li>
-           <li>
-             <a href="./pa.html" class="scroll-link">Practice Areas</a>
-           </li>
+           <li class="drop-down">
+           <a href="#" class="scroll-link solution"> Practice Areas <span><img src="./img/dropdown.svg"></span>  </a>
+           <ul class="drop-down-link">
+               <li><a href="./tax.html">Tax Law</a></li>
+               <li><a href="./ip.html">Intellectual Property</a></li>
+           </ul>
+       
+       </li>
            <li>
              <a href="./careers.html" class="scroll-link">Careers</a>
            </li>
@@ -62,9 +67,14 @@ function head(bannerClass){
         <div class="links-container">
           <ul class="nav-links">
             <li><a href="./about.html" class="scroll-link">About us</a></li>
-            <li>
-              <a href="./pa.html" class="scroll-link">Practice Areas</a>
-            </li>
+            <li class="drop-down">
+           <a href="#" class="scroll-link solution"> Practice Areas <span><img src="./img/dropdown.svg"></span>  </a>
+           <ul class="drop-down-link">
+               <li><a href="./tax.html">Tax Law</a></li>
+               <li><a href="./ip.html">Intellectual Property</a></li>
+           </ul>
+       
+       </li>
             <li>
               <a href="./careers.html" class="scroll-link">Careers</a>
             </li>
@@ -99,9 +109,14 @@ function head(bannerClass){
        <div class="links-container">
          <ul class="nav-links">
            <li><a href="./about.html" class="scroll-link">About us</a></li>
-           <li>
-             <a href="./pa.html" class="scroll-link">Practice Areas</a>
-           </li>
+           <li class="drop-down">
+           <a href="#" class="scroll-link solution"> Practice Areas <span><img src="./img/dropdown.svg"></span>  </a>
+           <ul class="drop-down-link">
+               <li><a href="./tax.html">Tax Law</a></li>
+               <li><a href="./ip.html">Intellectual Property</a></li>
+           </ul>
+       
+       </li>
            <li>
              <a href="./careers.html" class="scroll-link">Careers</a>
            </li>
@@ -117,18 +132,16 @@ function head(bannerClass){
    </div>`
     }
      
-    const navToggle = document.querySelector('.menu');
     const linksContainer = document.querySelector('.links-container');
     const nav = document.querySelector('.nav');
     const logo = document.querySelector('.logo');
     const menu = document.querySelector('.menu');
     const fixed = document.querySelector('.fixed-nav')
     const links = linksContainer.querySelectorAll('.nav-links li a')
-    navToggle.addEventListener('click', () =>{
-        console.log(navToggle);
+    menu.addEventListener('click', () =>{
+        console.log(menu);
         linksContainer.classList.toggle('show-links');
     })
-    console.log(fixed);
     window.addEventListener('scroll', ()=>{
         const navheight = nav.getBoundingClientRect().height;
         const scorllheight = window.pageYOffset;
@@ -150,6 +163,17 @@ function head(bannerClass){
                 item.classList.remove('black')
             })
         }
+    })
+    const dropdown = document.querySelector('.drop-down')
+    const dropdownContent = document.querySelector('.drop-down-link')
+ 
+    dropdown.addEventListener('mouseenter', () => {
+        
+        dropdownContent.classList.add('display-links')
+    })
+    dropdown.addEventListener('mouseleave', () => {
+
+        dropdownContent.classList.remove('display-links')
     })
 }
 

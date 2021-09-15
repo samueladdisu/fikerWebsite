@@ -51,6 +51,7 @@ $xxl: 1920px;
     }
     nav{
       position: relative;
+      top: 0;
       transition: all 0.3s linear;
       height: 7.44rem;
       padding-bottom: 0.5rem;
@@ -59,8 +60,12 @@ $xxl: 1920px;
         .nav-header{
           display: flex;
           justify-content: space-between;
+          
+          max-height: 11.81rem;
+          
           .logo{
             width: 7rem;
+            max-height: 11.81rem;
             margin: 0;
             padding: 0;
             align-self: start;
@@ -92,21 +97,54 @@ $xxl: 1920px;
       }
     }
     .links-container{
-      // background: #fff;
-      background: lightblue;
+      background: #fff;
       height: 0;
       overflow: hidden;
       transition: all 0.3s linear;
       .nav-links{
         li{
         padding: 0.75rem 1rem;
-        
+      }
+      .drop-down {
+        padding: 0.75rem 1rem;
+        height: auto;
+        a{
+          display: flex;
+          align-items: center;
+          gap: .3rem;
+        }
+        .drop-down-link {
+          background-color: #fff;
+          border-radius: 3px;
+          display: none;
+    
+          li {
+            a {
+              color: $primary-color !important;
+            }
+            &:hover {
+              background-color: $primary-color;
+            }
+            &:hover a {
+              color: #fff !important;
+            }
+          }
+        }
+        @include responsive($md) {
+          .drop-down-link {
+            position: absolute;
+            box-shadow: 2px 2px 44px rgba(0, 0, 0, 0.25);
+            background: rgb(240, 249, 255);
+          
+          }
+        }
+        .display-links {
+          display: block !important;
         }
       }
+      }
     }
-    .show-links{
-      height: auto !important;
-    }
+    
     .fixed-nav{
       background-color: #fff;
       position: fixed;
@@ -116,6 +154,9 @@ $xxl: 1920px;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       z-index: 999999;
       
+    }
+    .show-links{
+      height: auto !important;
     }
     @include responsive($xl){
         .nav{
