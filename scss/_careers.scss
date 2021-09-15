@@ -1,0 +1,186 @@
+@include header(career, url("../img/career.jpg"), 60vh, rgba(0, 0, 0, 0.28));
+
+.career-title {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+@include responsive($md) {
+  .career-title {
+    font-size: 3.25rem;
+  }
+}
+
+.job-openings {
+  .job-openings-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+  }
+  .container {
+    margin-top: 3.19rem;
+    max-width: 89.38rem;
+    .job-box {
+      max-width: 25.5rem;
+      width: 21rem;
+      height: 19.81rem;
+      background: #ffffff;
+      border: 1px solid #dadada;
+      box-sizing: border-box;
+      border-radius: 1.19rem;
+      padding: 1.69rem 0.69rem 1.81rem 1.44rem;
+      margin-bottom: 3.19rem;
+      transition: all .3s linear;
+      &:hover {
+        box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.15);
+        border: none;
+        cursor: pointer;
+      }
+      header {
+        padding-bottom: 2.44rem;
+        display: flex;
+        justify-content: space-between;
+        p {
+          font-size: 0.88rem;
+        }
+        .top-right {
+          color: #52ff00;
+        }
+        .top-right-wrong {
+          color: #ff4141;
+        }
+      }
+      main {
+        .job-title {
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: $primary-color;
+          padding-bottom: 1.5rem;
+        }
+        p {
+          line-height: 1.31rem;
+          padding-bottom: 1.88rem;
+          font-size: 1rem;
+        }
+      }
+      a {
+        display: flex;
+        gap: 0.38rem;
+      }
+    }
+  }
+}
+
+.resume {
+  background-color: $secondary-color;
+  position: relative;
+  .resume-bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    object-fit: cover;
+  }
+  .resume-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    padding-top: 2.5rem;
+    margin-bottom: 3.13rem;
+  }
+  .container {
+    max-width: 45.31rem;
+    .myform {
+      width: 90%;
+      margin: 0 auto;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      outline: none;
+      z-index: 99;
+      .form-wrapper {
+        width: 100%;
+      }
+      h2 {
+        font-weight: 600;
+        font-size: 1.75rem;
+        line-height: 1.75rem;
+        letter-spacing: -0.005em;
+        color: $primary-color;
+        text-align: left;
+        padding-left: 2.31rem;
+        margin-top: 1.88rem;
+      }
+      input {
+        margin: 2.81rem 0 1.44rem;
+        padding-bottom: 1.13rem;
+        background: transparent;
+        border: none;
+        width: 90%;
+        outline: none;
+        border-bottom: 1px solid #ffffff;
+        &:focus {
+            border-bottom: 1px solid #c0c0c0;
+        }
+      }
+      .file-input {
+        margin-top: 1.56rem;
+        .file {
+          opacity: 0;
+          width: 0.1px;
+          height: 0.1px;
+          position: absolute;
+        }
+        label {
+          display: block;
+          position: relative;
+          padding: 0.66rem 1.44rem;
+          background: #d1d1d1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #575757;
+          cursor: pointer;
+          transition: transform 0.2s ease-out;
+          img {
+            margin-right: 6px;
+          }
+        }
+      }
+      input::placeholder {
+        color: #d1d1d1;
+      }
+      .textarea {
+        padding-bottom: 8.19rem;
+      }
+      button {
+        margin-bottom: 4rem;
+        align-content: left;
+      }
+    }
+  }
+}
+
+@include responsive($lg) {
+  .resume {
+    .container {
+      .myform {
+        .form-wrapper {
+          display: flex;
+        }
+      }
+    }
+  }
+}
+
+@include responsive($xl) {
+  .job-openings {
+    .container {
+      gap: 1.5rem;
+    }
+  }
+}

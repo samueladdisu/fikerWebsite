@@ -2,6 +2,11 @@
 @import "mixins";
 @import "utilities";
 @import "about";
+@import "contact";
+@import "careers";
+@import "blog";
+@import "ip";
+@import "tax";
 
 @include header(home, url('../img/court.jpg'),90vh, rgba(0,0,0,0.58));
 .hero{
@@ -154,7 +159,17 @@
       border-radius: 1.875rem;
       margin-top: 3.06rem;
       padding: 2rem 1.63rem 0;
-      img, .pa-card-title, .pa-card-text{
+      transition: background 0.3s linear;
+      &:hover{
+        background: $primary-color;
+        cursor: pointer;
+      }
+      &:hover .pa-card-title, &:hover .pa-card-text, &:hover a,
+      &:hover svg path{
+        color: #fff;
+        fill: #fff;
+      }
+      svg, .pa-card-title, .pa-card-text{
         margin-bottom: 0.8125rem;
       }
       .pa-card-text{

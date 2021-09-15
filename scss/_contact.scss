@@ -1,0 +1,129 @@
+@include header(contact, url("../img/map.jpg"), 60vh, rgba(0, 0, 0, 0.4));
+.contact-wrapper {
+  margin: 0 auto;
+  margin-bottom: 3.81rem;
+  margin-top: -6rem;
+  max-width: 78.88rem;
+  .request-form {
+    z-index: 9999;
+    background: #ffffff;
+    box-shadow: 2px 2px 21px rgba(0, 0, 0, 0.25);
+    .myform {
+      width: 18.88rem;
+      margin: 0 auto;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h2 {
+        font-weight: 600;
+        font-size: 1.75rem;
+        line-height: 1.75rem;
+        letter-spacing: -0.005em;
+        color: $primary-color;
+        text-align: left;
+        padding-left: 2.31rem;
+        margin-top: 1.88rem;
+      }
+      input {
+        margin: 2.81rem 0 1.44rem;
+        padding-bottom: 1.13rem;
+        border: none;
+        width: 90%;
+        border-bottom: 1px solid #b8b8b8;
+      }
+      .textarea {
+        padding-bottom: 8.19rem;
+      }
+      button {
+        margin-bottom: 2.63rem;
+      }
+    }
+  }
+  .contact-info {
+    z-index: 9999;
+    box-shadow: 2px 2px 21px rgba(0, 0, 0, 0.25);
+    background-color: $secondary-color;
+    .contact-info-wrapper {
+      margin: 0 auto;
+      width: 18.88rem;
+      padding-left: 2rem;
+      padding-bottom: 6rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 3rem;
+      padding-top: 2.81rem;
+      color: #fff;
+    }
+    ul {
+      li {
+        margin-bottom: 1.5rem;
+        a {
+          color: rgb(228, 228, 228);
+        }
+      }
+    }
+    .contact-box {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+
+      .contact-info-text {
+        width: 12.69rem;
+        p {
+          margin-bottom: 0.88rem;
+          line-height: 1.25rem;
+          color: #fff;
+          a {
+            color: rgb(228, 228, 228);
+          }
+        }
+      }
+    }
+    .footer-social {
+      display: flex;
+      gap: 2rem;
+    }
+  }
+}
+
+@include responsive($md) {
+  .contact-wrapper {
+    .request-form {
+      margin-top: 0;
+      .myform {
+        // width: 25rem;
+        align-items: flex-start;
+      }
+    }
+  }
+}
+
+@include responsive($lg) {
+  .contact-wrapper {
+    .request-form {
+      margin-top: 0;
+      .myform {
+        width: 100%;
+        align-items: flex-start;
+        padding-left: 1.5rem;
+        h2 {
+          padding-left: 0rem;
+        }
+      }
+    }
+  }
+}
+
+@include responsive($xl) {
+  .contact-wrapper {
+    .contact-info {
+      .contact-info-wrapper {
+        width: auto;
+      }
+    }
+  }
+}
