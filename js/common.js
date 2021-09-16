@@ -27,7 +27,7 @@ function head(bannerClass){
            <li>
              <a href="./careers.html" class="scroll-link">Careers</a>
            </li>
-           <li><a href="./proclamation.html" class="scroll-link">Proclamation</a></li>
+           <li><a href="./proclamation.php" class="scroll-link">Proclamation</a></li>
            <li><a href="./contact.html" class="scroll-link">Contact</a></li>
          </ul>
        </div>
@@ -78,7 +78,7 @@ function head(bannerClass){
             <li>
               <a href="./careers.html" class="scroll-link">Careers</a>
             </li>
-            <li><a href="./proclamation.html" class="scroll-link">Proclamation</a></li>
+            <li><a href="./proclamation.php" class="scroll-link">Proclamation</a></li>
             <li><a href="./contact.html" class="scroll-link">Contact</a></li>
           </ul>
         </div>
@@ -120,7 +120,7 @@ function head(bannerClass){
            <li>
              <a href="./careers.html" class="scroll-link">Careers</a>
            </li>
-           <li><a href="./proclamation.html" class="scroll-link">Proclamation</a></li>
+           <li><a href="./proclamation.php" class="scroll-link">Proclamation</a></li>
            <li><a href="./contact.html" class="scroll-link">Contact</a></li>
          </ul>
        </div>
@@ -138,15 +138,13 @@ function head(bannerClass){
     const menu = document.querySelector('.menu');
     const links = linksContainer.querySelectorAll('.nav-links li a')
     menu.addEventListener('click', () =>{
-        console.log(menu);
+        
         linksContainer.classList.toggle('show-links');
     })
     window.addEventListener('scroll', ()=>{
         const navheight = nav.getBoundingClientRect().height;
         const scorllheight = window.pageYOffset;
         const down = document.querySelector('.down-icon')
-        console.log('navHeight', navheight);
-        console.log('scorllHeight', scorllheight);
         if(scorllheight > navheight)
         {
             menu.innerHTML = ` <img src="./img/menu-black.svg" class="ham" alt="" />`
@@ -211,7 +209,7 @@ function foot (){
         <li><a href="./index.html">Home</a></li>
         <li><a href="./about.html">About</a></li>
         <li><a href="./careers.html">Careers</a></li>
-        <li><a href="./proclamation.html">Proclamation</a></li>
+        <li><a href="./proclamation.php">Proclamation</a></li>
         <li><a href="./contact.html">Contact</a></li>
       </ul>
     </div>

@@ -4,14 +4,30 @@ $lg: 992px;
 $xl: 1200px;
 $xxl: 1920px;
 
-
-//header 
-@mixin header($class,$img,$height,$opacity) {
-   .#{$class}-header{
-      position: relative;
-      height: $height;
+//header
+@mixin header($class, $img, $height, $opacity) {
+  .#{$class}-header {
+    position: relative;
+    height: $height;
+  }
+  .#{$class}-banner {
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: #{$opacity} #{$img} no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-blend-mode: overlay;
+    .headline {
+      margin-top: 8.94rem;
     }
-    .#{$class}-banner{
+  }
+  @if $class == "blog" {
+    .#{$class}-banner {
       height: 100%;
       width: 100%;
       z-index: 999;
@@ -20,104 +36,85 @@ $xxl: 1920px;
       bottom: 0;
       right: 0;
       background: #{$opacity} #{$img} no-repeat;
-      background-position:  center center;
+      background-position: center right;
       background-size: cover;
       background-blend-mode: overlay;
-      .headline{
-        margin-top: 8.94rem;
-      }
     }
-    @if $class == 'blog' {
-      .#{$class}-banner{
-        height: 100%;
-        width: 100%;
-        z-index: 999;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        background: #{$opacity} #{$img} no-repeat;
-        background-position:  center right;
-        background-size: cover;
-        background-blend-mode: overlay;
-      }
-    }
-    .ham{
-      color: #fff;
-      font-size: 2rem;
-    }
-    .black{
-      color: #000;
-    }
-    nav{
-      position: relative;
-      top: 0;
-      transition: all 0.3s linear;
-      height: 7.44rem;
-      padding-bottom: 0.5rem;
-      z-index: 999999;
-      .container{
-        .nav-header{
-          display: flex;
-          justify-content: space-between;
-          
+  }
+  .ham {
+    color: #fff;
+    font-size: 2rem;
+  }
+  .black {
+    color: #000;
+  }
+  nav {
+    position: relative;
+    top: 0;
+    transition: all 0.3s linear;
+    height: 7.44rem;
+    padding-bottom: 0.5rem;
+    z-index: 999999;
+    .container {
+      .nav-header {
+        display: flex;
+        justify-content: space-between;
+
+        max-height: 11.81rem;
+
+        .logo {
+          width: 7rem;
           max-height: 11.81rem;
-          
-          .logo{
-            width: 7rem;
-            max-height: 11.81rem;
-            margin: 0;
-            padding: 0;
-            align-self: start;
-            // background: lightblue;
-            img{
-              object-fit: cover;
-              object-position: center top;
-            }
-          }
-          .menu{
-            width: 2rem;
-            margin-top: 3rem;
+          margin: 0;
+          padding: 0;
+          align-self: start;
+          // background: lightblue;
+          img {
+            object-fit: cover;
+            object-position: center top;
           }
         }
-        @include responsive($md){
-          .nav-header{
-            .logo{
-              flex: 1;
-              width: 16rem;
-              top: 0;
-            }
-            .ham{
-              font-size: 4rem;
-            }
-            
+        .menu {
+          width: 2rem;
+          margin-top: 3rem;
+        }
+      }
+      @include responsive($md) {
+        .nav-header {
+          .logo {
+            flex: 1;
+            width: 16rem;
+            top: 0;
+          }
+          .ham {
+            font-size: 4rem;
           }
         }
-        
       }
     }
-    .links-container{
-      background: #fff;
-      height: 0;
-      overflow: hidden;
-      transition: all 0.3s linear;
-      .nav-links{
-        li{
+  }
+  .links-container {
+    background: #fff;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s linear;
+    .nav-links {
+      li {
         padding: 0.75rem 1rem;
       }
       .drop-down {
         padding: 0.75rem 1rem;
         height: auto;
-        a{
+        a {
           display: flex;
           align-items: center;
-          gap: .3rem;
+          gap: 0.3rem;
         }
         .drop-down-link {
           background-color: #fff;
           border-radius: 3px;
           display: none;
-    
+
           li {
             a {
               color: $primary-color !important;
@@ -135,97 +132,90 @@ $xxl: 1920px;
             position: absolute;
             box-shadow: 2px 2px 44px rgba(0, 0, 0, 0.25);
             background: rgb(240, 249, 255);
-          
           }
         }
         .display-links {
           display: block !important;
         }
       }
-      }
     }
-    
-    .fixed-nav{
-      background-color: #fff;
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 100%;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      z-index: 999999;
-      
-    }
-    .show-links{
-      height: auto !important;
-    }
-    @include responsive($xl){
-        .nav{
-          .container{
-            display: flex;
-            align-items: center;
-            .nav-header{
-              flex: 1;
-              padding: 0;
-              .menu{
-                display: none;
-              }
+  }
 
-            }
-            .links-container{
-              flex: 1;
-              background: transparent;
-              height: auto;
-              padding-bottom: 2rem;
-              .nav-links{
-                display: flex;
-                justify-content: space-between;
-                li{
-                  a{
-                    color: #fff;
-                    transition: all .3s linear;
-                    &:hover{
-                    }
-                    &:active{
-                      color: $primary-color;
-                    }
-                  }
-                  .black{
-                    color: #000;
-                  }
+  .fixed-nav {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 999999;
+  }
+  .show-links {
+    height: auto !important;
+  }
+  @include responsive($xl) {
+    .nav {
+      .container {
+        display: flex;
+        align-items: center;
+        .nav-header {
+          flex: 1;
+          padding: 0;
+          .menu {
+            display: none;
+          }
+        }
+        .links-container {
+          flex: 1;
+          background: transparent;
+          height: auto;
+          padding-bottom: 2rem;
+          .nav-links {
+            display: flex;
+            justify-content: space-between;
+            li {
+              a {
+                color: #fff;
+                transition: all 0.3s linear;
+                &:hover {
                 }
-                
+                &:active {
+                  color: $primary-color;
+                }
               }
-              
+              .black {
+                color: #000;
+              }
             }
           }
+        }
       }
+    }
   }
 }
 
-@mixin responsive($screen-size){
-   @if $screen-size == $sm {
-      @media screen and (min-width: $screen-size){
-         @content;
-      }
-   }@else if $screen-size == $md {
-      @media screen and (min-width: $screen-size){
-         @content;
-      }
-   }@else if $screen-size == $lg {
-      @media screen and (min-width: $screen-size){
-         @content;
-      }
-   }@else if $screen-size == $xl {
-      @media screen and (min-width: $screen-size){
-         @content;
-      }
-   }@else if $screen-size == $xxl {
-      @media screen and (min-width: $screen-size){
-         @content;
-      }
-   }
-   @else {
-      @error "#{$screen-size} is Invalid screen size";
-   }
+@mixin responsive($screen-size) {
+  @if $screen-size == $sm {
+    @media screen and (min-width: $screen-size) {
+      @content;
+    }
+  } @else if $screen-size == $md {
+    @media screen and (min-width: $screen-size) {
+      @content;
+    }
+  } @else if $screen-size == $lg {
+    @media screen and (min-width: $screen-size) {
+      @content;
+    }
+  } @else if $screen-size == $xl {
+    @media screen and (min-width: $screen-size) {
+      @content;
+    }
+  } @else if $screen-size == $xxl {
+    @media screen and (min-width: $screen-size) {
+      @content;
+    }
+  } @else {
+    @error "#{$screen-size} is Invalid screen size";
+  }
 }
-

@@ -894,7 +894,7 @@ nav .container .nav-header .menu {
 .links-container .nav-links .drop-down a {
   display: flex;
   align-items: center;
-  gap: .3rem;
+  gap: 0.3rem;
 }
 
 .links-container .nav-links .drop-down .drop-down-link {
@@ -965,7 +965,7 @@ nav .container .nav-header .menu {
   }
   .nav .container .links-container .nav-links li a {
     color: #fff;
-    transition: all .3s linear;
+    transition: all 0.3s linear;
   }
   .nav .container .links-container .nav-links li a:active {
     color: #490048;
@@ -1155,7 +1155,7 @@ nav .container .nav-header .menu {
 .links-container .nav-links .drop-down a {
   display: flex;
   align-items: center;
-  gap: .3rem;
+  gap: 0.3rem;
 }
 
 .links-container .nav-links .drop-down .drop-down-link {
@@ -1226,7 +1226,7 @@ nav .container .nav-header .menu {
   }
   .nav .container .links-container .nav-links li a {
     color: #fff;
-    transition: all .3s linear;
+    transition: all 0.3s linear;
   }
   .nav .container .links-container .nav-links li a:active {
     color: #490048;
@@ -1464,7 +1464,7 @@ nav .container .nav-header .menu {
 .links-container .nav-links .drop-down a {
   display: flex;
   align-items: center;
-  gap: .3rem;
+  gap: 0.3rem;
 }
 
 .links-container .nav-links .drop-down .drop-down-link {
@@ -1535,7 +1535,7 @@ nav .container .nav-header .menu {
   }
   .nav .container .links-container .nav-links li a {
     color: #fff;
-    transition: all .3s linear;
+    transition: all 0.3s linear;
   }
   .nav .container .links-container .nav-links li a:active {
     color: #490048;
@@ -1852,7 +1852,7 @@ nav .container .nav-header .menu {
 .links-container .nav-links .drop-down a {
   display: flex;
   align-items: center;
-  gap: .3rem;
+  gap: 0.3rem;
 }
 
 .links-container .nav-links .drop-down .drop-down-link {
@@ -1923,7 +1923,7 @@ nav .container .nav-header .menu {
   }
   .nav .container .links-container .nav-links li a {
     color: #fff;
-    transition: all .3s linear;
+    transition: all 0.3s linear;
   }
   .nav .container .links-container .nav-links li a:active {
     color: #490048;
@@ -2295,7 +2295,7 @@ nav .container .nav-header .menu {
 .links-container .nav-links .drop-down a {
   display: flex;
   align-items: center;
-  gap: .3rem;
+  gap: 0.3rem;
 }
 
 .links-container .nav-links .drop-down .drop-down-link {
@@ -2366,7 +2366,7 @@ nav .container .nav-header .menu {
   }
   .nav .container .links-container .nav-links li a {
     color: #fff;
-    transition: all .3s linear;
+    transition: all 0.3s linear;
   }
   .nav .container .links-container .nav-links li a:active {
     color: #490048;
@@ -2784,7 +2784,7 @@ nav .container .nav-header .menu {
 .links-container .nav-links .drop-down a {
   display: flex;
   align-items: center;
-  gap: .3rem;
+  gap: 0.3rem;
 }
 
 .links-container .nav-links .drop-down .drop-down-link {
@@ -2855,7 +2855,7 @@ nav .container .nav-header .menu {
   }
   .nav .container .links-container .nav-links li a {
     color: #fff;
-    transition: all .3s linear;
+    transition: all 0.3s linear;
   }
   .nav .container .links-container .nav-links li a:active {
     color: #490048;
@@ -3088,7 +3088,7 @@ nav .container .nav-header .menu {
 .links-container .nav-links .drop-down a {
   display: flex;
   align-items: center;
-  gap: .3rem;
+  gap: 0.3rem;
 }
 
 .links-container .nav-links .drop-down .drop-down-link {
@@ -3159,7 +3159,7 @@ nav .container .nav-header .menu {
   }
   .nav .container .links-container .nav-links li a {
     color: #fff;
-    transition: all .3s linear;
+    transition: all 0.3s linear;
   }
   .nav .container .links-container .nav-links li a:active {
     color: #490048;
@@ -3429,10 +3429,21 @@ nav .container .nav-header .menu {
   padding-top: 5.3125rem;
 }
 
+.testimonial .container {
+  display: flex;
+  height: 50.81rem;
+  max-width: 32.25rem;
+  position: relative;
+  overflow: hidden;
+}
+
 .testimonial .container .single-test {
+  width: 100%;
+  position: absolute;
   display: flex;
   align-items: center;
   flex-direction: column;
+  transition: all 0.25s ease-in-out;
 }
 
 .testimonial .container .single-test .test-photo {
@@ -3463,7 +3474,11 @@ nav .container .nav-header .menu {
   font-size: 14px;
 }
 
-.testimonial .container .single-test .btn-container {
+.testimonial .btn-container {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   margin-top: 1.6875rem;
   margin-bottom: 2rem;
   display: flex;
@@ -3471,6 +3486,9 @@ nav .container .nav-header .menu {
 }
 
 @media screen and (min-width: 768px) {
+  .testimonial .container {
+    height: 46.81rem;
+  }
   .testimonial .testi-bottom, .testimonial .testi-top {
     width: 10rem;
   }

@@ -154,16 +154,38 @@ const paInner = practiceAreas.map(item =>{
 }).join('')
 
 paContainer.innerHTML = paInner
-// const paImg = document.querySelectorAll('.pa-card .pa-img')
-// const paCard = document.querySelectorAll('.pa-card')
 
-// paCard.forEach(card => {
-//     card.addEventListener('mouseover', (e) =>{
-//         console.log(e.target.classList);  
-//         const parent = e.target.children[0]
-//         const paId = practiceAreas.map( item => {
-//             return parent.item.id
-//         })
-//         console.log(paId);
-//     })
-// })
+const nextBtn = document.querySelector('.next')
+const prevBtn = document.querySelector('.prev')
+const slides = document.querySelectorAll('.single-test')
+
+
+slides.forEach( (slide, index) =>{
+    slide.style.left = `${index * 100}%`
+})
+
+let counter = 0;
+
+nextBtn.addEventListener('click', () =>{
+    counter++
+    if(counter > slides.length -1){
+        counter=0;
+    }
+    carousel()
+      
+})
+
+prevBtn.addEventListener('click', () =>{
+    counter--
+    if(counter < 0){
+        counter = slides.length -1
+    }
+    carousel()
+})
+
+function carousel(){
+    
+    slides.forEach(function (slide) {
+        slide.style.transform = `translateX(-${counter * 100}%)`;
+    });
+}

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Blog</title>
+    <title>Proclamations</title>
   </head>
   <body>
     <header class="blog-header" id="header"></header>
@@ -27,7 +27,7 @@
                 amet etiam. Sed sit eget vel viverra cursus proin condimentum.
                 Molestie scelerisque amet vitae turpis pulvinar commodo.
               </p>
-              <a href="./singleBlog.html"
+              <a href="./singleBlog.php"
                 >Continue Reading
                 <img src="./img/right-arrow.svg" alt="" />
               </a>

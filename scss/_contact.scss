@@ -1,4 +1,175 @@
-@include header(contact, url("../img/map.jpg"), 60vh, rgba(0, 0, 0, 0.4));
+.contact-header {
+  position: relative;
+  height: 60vh;
+}
+.contact-banner {
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.4) url("../img/map.jpg") no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: overlay;
+  .headline {
+    margin-top: 8.94rem;
+  }
+}
+.ham {
+  color: #fff;
+  font-size: 2rem;
+}
+.black {
+  color: #000;
+}
+nav {
+  position: relative;
+  top: 0;
+  transition: all 0.3s linear;
+  height: 7.44rem;
+  padding-bottom: 0.5rem;
+  z-index: 999999;
+  .container {
+    .nav-header {
+      display: flex;
+      justify-content: space-between;
+
+      max-height: 11.81rem;
+
+      .logo {
+        width: 7rem;
+        max-height: 11.81rem;
+        margin: 0;
+        padding: 0;
+        align-self: start;
+        // background: lightblue;
+        img {
+          object-fit: cover;
+          object-position: center top;
+        }
+      }
+      .menu {
+        width: 2rem;
+        margin-top: 3rem;
+      }
+    }
+    @include responsive($md) {
+      .nav-header {
+        .logo {
+          flex: 1;
+          width: 16rem;
+          top: 0;
+        }
+        .ham {
+          font-size: 4rem;
+        }
+      }
+    }
+  }
+}
+.links-container {
+  background: #fff;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s linear;
+  .nav-links {
+    li {
+      padding: 0.75rem 1rem;
+    }
+    .drop-down {
+      padding: 0.75rem 1rem;
+      height: auto;
+      a {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+      }
+      .drop-down-link {
+        background-color: #fff;
+        border-radius: 3px;
+        display: none;
+
+        li {
+          a {
+            color: $primary-color !important;
+          }
+          &:hover {
+            background-color: $primary-color;
+          }
+          &:hover a {
+            color: #fff !important;
+          }
+        }
+      }
+      @include responsive($md) {
+        .drop-down-link {
+          position: absolute;
+          box-shadow: 2px 2px 44px rgba(0, 0, 0, 0.25);
+          background: rgb(240, 249, 255);
+        }
+      }
+      .display-links {
+        display: block !important;
+      }
+    }
+  }
+}
+
+.fixed-nav {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  z-index: 999999;
+}
+.show-links {
+  height: auto !important;
+}
+@include responsive($xl) {
+  .nav {
+    .container {
+      display: flex;
+      align-items: center;
+      .nav-header {
+        flex: 1;
+        padding: 0;
+        .menu {
+          display: none;
+        }
+      }
+      .links-container {
+        flex: 1;
+        background: transparent;
+        height: auto;
+        padding-bottom: 2rem;
+        .nav-links {
+          display: flex;
+          justify-content: space-between;
+          li {
+            a {
+              color: #fff;
+              transition: all 0.3s linear;
+              &:hover {
+              }
+              &:active {
+                color: $primary-color;
+              }
+            }
+            .black {
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 .contact-wrapper {
   margin: 0 auto;
   margin-bottom: 3.81rem;

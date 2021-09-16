@@ -1,5 +1,4 @@
-import { head, foot} from './common.js'
+import {  foot} from './common.js'
 
-head("contact")
 
 foot()
