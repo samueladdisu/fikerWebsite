@@ -175,6 +175,7 @@ $xxl: 1920px;
               flex: 1;
               background: transparent;
               height: auto;
+              padding-bottom: 2rem;
               .nav-links{
                 display: flex;
                 justify-content: space-between;
@@ -183,7 +184,6 @@ $xxl: 1920px;
                     color: #fff;
                     transition: all .3s linear;
                     &:hover{
-                      color: $primary-color;
                     }
                     &:active{
                       color: $primary-color;

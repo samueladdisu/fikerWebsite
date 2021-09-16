@@ -957,6 +957,7 @@ nav .container .nav-header .menu {
     flex: 1;
     background: transparent;
     height: auto;
+    padding-bottom: 2rem;
   }
   .nav .container .links-container .nav-links {
     display: flex;
@@ -965,9 +966,6 @@ nav .container .nav-header .menu {
   .nav .container .links-container .nav-links li a {
     color: #fff;
     transition: all .3s linear;
-  }
-  .nav .container .links-container .nav-links li a:hover {
-    color: #490048;
   }
   .nav .container .links-container .nav-links li a:active {
     color: #490048;
@@ -1220,6 +1218,7 @@ nav .container .nav-header .menu {
     flex: 1;
     background: transparent;
     height: auto;
+    padding-bottom: 2rem;
   }
   .nav .container .links-container .nav-links {
     display: flex;
@@ -1228,9 +1227,6 @@ nav .container .nav-header .menu {
   .nav .container .links-container .nav-links li a {
     color: #fff;
     transition: all .3s linear;
-  }
-  .nav .container .links-container .nav-links li a:hover {
-    color: #490048;
   }
   .nav .container .links-container .nav-links li a:active {
     color: #490048;
@@ -1531,6 +1527,7 @@ nav .container .nav-header .menu {
     flex: 1;
     background: transparent;
     height: auto;
+    padding-bottom: 2rem;
   }
   .nav .container .links-container .nav-links {
     display: flex;
@@ -1539,9 +1536,6 @@ nav .container .nav-header .menu {
   .nav .container .links-container .nav-links li a {
     color: #fff;
     transition: all .3s linear;
-  }
-  .nav .container .links-container .nav-links li a:hover {
-    color: #490048;
   }
   .nav .container .links-container .nav-links li a:active {
     color: #490048;
@@ -1921,6 +1915,7 @@ nav .container .nav-header .menu {
     flex: 1;
     background: transparent;
     height: auto;
+    padding-bottom: 2rem;
   }
   .nav .container .links-container .nav-links {
     display: flex;
@@ -1929,9 +1924,6 @@ nav .container .nav-header .menu {
   .nav .container .links-container .nav-links li a {
     color: #fff;
     transition: all .3s linear;
-  }
-  .nav .container .links-container .nav-links li a:hover {
-    color: #490048;
   }
   .nav .container .links-container .nav-links li a:active {
     color: #490048;
@@ -2168,7 +2160,6 @@ nav .container .nav-header .menu {
 
 .recognition {
   height: 17.1875rem;
-  margin-bottom: 4.75rem;
   background: rgba(0, 0, 0, 0.5) url("../img/reco-bg.jpg") no-repeat;
   background-size: cover;
   background-position: center center;
@@ -2367,6 +2358,7 @@ nav .container .nav-header .menu {
     flex: 1;
     background: transparent;
     height: auto;
+    padding-bottom: 2rem;
   }
   .nav .container .links-container .nav-links {
     display: flex;
@@ -2375,9 +2367,6 @@ nav .container .nav-header .menu {
   .nav .container .links-container .nav-links li a {
     color: #fff;
     transition: all .3s linear;
-  }
-  .nav .container .links-container .nav-links li a:hover {
-    color: #490048;
   }
   .nav .container .links-container .nav-links li a:active {
     color: #490048;
@@ -2858,6 +2847,7 @@ nav .container .nav-header .menu {
     flex: 1;
     background: transparent;
     height: auto;
+    padding-bottom: 2rem;
   }
   .nav .container .links-container .nav-links {
     display: flex;
@@ -2866,9 +2856,6 @@ nav .container .nav-header .menu {
   .nav .container .links-container .nav-links li a {
     color: #fff;
     transition: all .3s linear;
-  }
-  .nav .container .links-container .nav-links li a:hover {
-    color: #490048;
   }
   .nav .container .links-container .nav-links li a:active {
     color: #490048;
@@ -3164,6 +3151,7 @@ nav .container .nav-header .menu {
     flex: 1;
     background: transparent;
     height: auto;
+    padding-bottom: 2rem;
   }
   .nav .container .links-container .nav-links {
     display: flex;
@@ -3172,9 +3160,6 @@ nav .container .nav-header .menu {
   .nav .container .links-container .nav-links li a {
     color: #fff;
     transition: all .3s linear;
-  }
-  .nav .container .links-container .nav-links li a:hover {
-    color: #490048;
   }
   .nav .container .links-container .nav-links li a:active {
     color: #490048;
@@ -3256,6 +3241,7 @@ nav .container .nav-header .menu {
   position: absolute;
   top: 0;
   width: 100%;
+  z-index: 1;
 }
 
 .about .about-title {
@@ -3286,6 +3272,7 @@ nav .container .nav-header .menu {
   line-height: 2.44rem;
   padding-bottom: 3.56rem;
   text-align: center;
+  z-index: 999999;
 }
 
 .about .container .about-text p {

@@ -17,7 +17,7 @@ function head(bannerClass){
          <ul class="nav-links">
            <li><a href="./about.html" class="scroll-link">About us</a></li>
            <li class="drop-down">
-           <a href="#" class="scroll-link solution"> Practice Areas <span><img src="./img/dropdown.svg"></span>  </a>
+           <a href="#" class="scroll-link solution"> Practice Areas <span><img src="./img/dropdown.svg" class="down-icon"></span>  </a>
            <ul class="drop-down-link">
                <li><a href="./tax.html">Tax Law</a></li>
                <li><a href="./ip.html">Intellectual Property</a></li>
@@ -27,7 +27,7 @@ function head(bannerClass){
            <li>
              <a href="./careers.html" class="scroll-link">Careers</a>
            </li>
-           <li><a href="./blog.html" class="scroll-link">Blog</a></li>
+           <li><a href="./proclamation.html" class="scroll-link">Proclamation</a></li>
            <li><a href="./contact.html" class="scroll-link">Contact</a></li>
          </ul>
        </div>
@@ -68,7 +68,7 @@ function head(bannerClass){
           <ul class="nav-links">
             <li><a href="./about.html" class="scroll-link">About us</a></li>
             <li class="drop-down">
-           <a href="#" class="scroll-link solution"> Practice Areas <span><img src="./img/dropdown.svg"></span>  </a>
+           <a href="#" class="scroll-link solution"> Practice Areas <span><img src="./img/dropdown.svg" class="down-icon"></span>  </a>
            <ul class="drop-down-link">
                <li><a href="./tax.html">Tax Law</a></li>
                <li><a href="./ip.html">Intellectual Property</a></li>
@@ -78,7 +78,7 @@ function head(bannerClass){
             <li>
               <a href="./careers.html" class="scroll-link">Careers</a>
             </li>
-            <li><a href="./blog.html" class="scroll-link">Blog</a></li>
+            <li><a href="./proclamation.html" class="scroll-link">Proclamation</a></li>
             <li><a href="./contact.html" class="scroll-link">Contact</a></li>
           </ul>
         </div>
@@ -110,7 +110,7 @@ function head(bannerClass){
          <ul class="nav-links">
            <li><a href="./about.html" class="scroll-link">About us</a></li>
            <li class="drop-down">
-           <a href="#" class="scroll-link solution"> Practice Areas <span><img src="./img/dropdown.svg"></span>  </a>
+           <a href="#" class="scroll-link solution"> Practice Areas <span><img src="./img/dropdown.svg" class="down-icon"></span>  </a>
            <ul class="drop-down-link">
                <li><a href="./tax.html">Tax Law</a></li>
                <li><a href="./ip.html">Intellectual Property</a></li>
@@ -120,7 +120,7 @@ function head(bannerClass){
            <li>
              <a href="./careers.html" class="scroll-link">Careers</a>
            </li>
-           <li><a href="./blog.html" class="scroll-link">Blog</a></li>
+           <li><a href="./proclamation.html" class="scroll-link">Proclamation</a></li>
            <li><a href="./contact.html" class="scroll-link">Contact</a></li>
          </ul>
        </div>
@@ -136,7 +136,6 @@ function head(bannerClass){
     const nav = document.querySelector('.nav');
     const logo = document.querySelector('.logo');
     const menu = document.querySelector('.menu');
-    const fixed = document.querySelector('.fixed-nav')
     const links = linksContainer.querySelectorAll('.nav-links li a')
     menu.addEventListener('click', () =>{
         console.log(menu);
@@ -145,6 +144,7 @@ function head(bannerClass){
     window.addEventListener('scroll', ()=>{
         const navheight = nav.getBoundingClientRect().height;
         const scorllheight = window.pageYOffset;
+        const down = document.querySelector('.down-icon')
         console.log('navHeight', navheight);
         console.log('scorllHeight', scorllheight);
         if(scorllheight > navheight)
@@ -153,11 +153,13 @@ function head(bannerClass){
             links.forEach(item =>{
                 item.classList.add('black')
             })
+            down.setAttribute('src', './img/dropdown-black.svg')
             logo.innerHTML = `<a href="./index.html"><img src="./img/second_logo.svg" alt="Battery World Logo"></a>`
             nav.classList.add('fixed-nav')
         }else{
             logo.innerHTML = `<a href="./index.html"><img src="./img/fiker_logo.svg" alt="Fiker legal service Logo" /> </a>`
             nav.classList.remove('fixed-nav')
+            down.setAttribute('src', './img/dropdown.svg')
             menu.innerHTML = ` <img src="./img/menu-white.svg" class="ham" alt="" />`
             links.forEach(item =>{
                 item.classList.remove('black')
@@ -206,11 +208,11 @@ function foot (){
       <h2>Quick Links</h2>
 
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./careers.html">Careers</a></li>
+        <li><a href="./proclamation.html">Proclamation</a></li>
+        <li><a href="./contact.html">Contact</a></li>
       </ul>
     </div>
 
@@ -219,10 +221,10 @@ function foot (){
 
       <ul>
         <li><a href="#">Corporate and Buisness Law</a></li>
-        <li><a href="#">Tax Law</a></li>
+        <li><a href="./tax.html">Tax Law</a></li>
         <li><a href="#">Merger and Aquisition</a></li>
         <li><a href="#">Family and Succession</a></li>
-        <li><a href="#">Intellectual Property</a></li>
+        <li><a href="./ip.html">Intellectual Property</a></li>
       </ul>
     </div>
 
