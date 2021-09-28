@@ -22,7 +22,7 @@
           width: 100%;
           .myform {
             max-width: 45.56rem;
-            margin: 0 auto;
+            // margin: 0 auto;
             height: auto;
             display: flex;
             flex-direction: column;
@@ -51,6 +51,42 @@
             }
             button {
               margin-bottom: 2.63rem;
+            }
+          }
+          .comment-section{
+            margin-bottom: 3rem;
+            .c_wrapper{
+              display: flex;
+              align-items: flex-start;
+              gap: 1rem;
+              .comment-content{
+                .name{
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  font-weight: 600;
+                  margin-bottom: 0.81rem;
+                  .dot{
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background: #c4c4c4;
+                  }
+                  small{
+                    font-weight: normal;
+                  }
+                }
+                .comment-text{
+                  line-height: 1.56rem;
+                  max-width: 29.94rem;
+                }
+              }
+            }
+            .comment-bottom {
+              background: #D7D7D7;
+              width: 100%;
+              margin-top: 2rem;
+              height: 1px;
             }
           }
           .blog-content-title {
@@ -104,6 +140,12 @@
         flex-direction: row-reverse;
         width: 15.38rem;
         margin-bottom: 2.13rem;
+        .search-button{
+          background: none;
+          border: none;
+          padding: 0;
+          margin: 0;
+        }
         .icon {
           padding: 10px;
           min-width: 50px;
@@ -163,8 +205,15 @@
 @include responsive($md){
   .blog{
     .container{
-      display: flex;
       gap: 2rem;
+      .blog-container{
+        .single-blog{
+          .blog-img{
+            max-width: 25.44rem;
+            max-height: 20.50rem;
+          }
+        }
+      }
       .single-aside{
         margin-top: 2.38rem;
       }
@@ -178,7 +227,7 @@
       font-size: 2.25rem;
     }
     .container{
-      gap: 10rem;
+      gap: 8rem;
       .blog-container{
         .single-bloger{
           .blog-content{

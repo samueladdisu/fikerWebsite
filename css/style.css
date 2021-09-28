@@ -793,10 +793,20 @@ body {
   border-color: #490048;
 }
 
+.btn-outline-primary:hover {
+  color: #fff;
+  background: #490048;
+}
+
 .btn-outline-secondary {
   background: transparent;
   color: #fff;
   border-color: #fff;
+}
+
+.btn-outline-secondary:hover {
+  color: #490048;
+  background: #fff;
 }
 
 .about-header {
@@ -1959,7 +1969,6 @@ nav .container .nav-header .menu {
 
 .blog .container .blog-container .single-blog .blog-content .myform, .blog .container .blog-container .single-bloger .blog-content .myform {
   max-width: 45.56rem;
-  margin: 0 auto;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -1994,6 +2003,47 @@ nav .container .nav-header .menu {
 
 .blog .container .blog-container .single-blog .blog-content .myform button, .blog .container .blog-container .single-bloger .blog-content .myform button {
   margin-bottom: 2.63rem;
+}
+
+.blog .container .blog-container .single-blog .blog-content .comment-section, .blog .container .blog-container .single-bloger .blog-content .comment-section {
+  margin-bottom: 3rem;
+}
+
+.blog .container .blog-container .single-blog .blog-content .comment-section .c_wrapper, .blog .container .blog-container .single-bloger .blog-content .comment-section .c_wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.blog .container .blog-container .single-blog .blog-content .comment-section .c_wrapper .comment-content .name, .blog .container .blog-container .single-bloger .blog-content .comment-section .c_wrapper .comment-content .name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  margin-bottom: 0.81rem;
+}
+
+.blog .container .blog-container .single-blog .blog-content .comment-section .c_wrapper .comment-content .name .dot, .blog .container .blog-container .single-bloger .blog-content .comment-section .c_wrapper .comment-content .name .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #c4c4c4;
+}
+
+.blog .container .blog-container .single-blog .blog-content .comment-section .c_wrapper .comment-content .name small, .blog .container .blog-container .single-bloger .blog-content .comment-section .c_wrapper .comment-content .name small {
+  font-weight: normal;
+}
+
+.blog .container .blog-container .single-blog .blog-content .comment-section .c_wrapper .comment-content .comment-text, .blog .container .blog-container .single-bloger .blog-content .comment-section .c_wrapper .comment-content .comment-text {
+  line-height: 1.56rem;
+  max-width: 29.94rem;
+}
+
+.blog .container .blog-container .single-blog .blog-content .comment-section .comment-bottom, .blog .container .blog-container .single-bloger .blog-content .comment-section .comment-bottom {
+  background: #D7D7D7;
+  width: 100%;
+  margin-top: 2rem;
+  height: 1px;
 }
 
 .blog .container .blog-container .single-blog .blog-content .blog-content-title, .blog .container .blog-container .single-bloger .blog-content .blog-content-title {
@@ -2051,6 +2101,13 @@ nav .container .nav-header .menu {
   flex-direction: row-reverse;
   width: 15.38rem;
   margin-bottom: 2.13rem;
+}
+
+.blog .container aside .input-container .search-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .blog .container aside .input-container .icon {
@@ -2118,8 +2175,11 @@ nav .container .nav-header .menu {
 
 @media screen and (min-width: 768px) {
   .blog .container {
-    display: flex;
     gap: 2rem;
+  }
+  .blog .container .blog-container .single-blog .blog-img {
+    max-width: 25.44rem;
+    max-height: 20.50rem;
   }
   .blog .container .single-aside {
     margin-top: 2.38rem;
@@ -2131,7 +2191,7 @@ nav .container .nav-header .menu {
     font-size: 2.25rem;
   }
   .blog .container {
-    gap: 10rem;
+    gap: 8rem;
   }
   .blog .container .blog-container .single-bloger .blog-content .blog-content-titler {
     font-size: 2.25rem;
@@ -2505,6 +2565,7 @@ nav .container .nav-header .menu {
   flex-direction: column;
   padding-left: 2.19rem;
   align-items: flex-start;
+  z-index: 999;
 }
 
 .ip .container aside .form-wrapper .myform .wave {
@@ -2514,6 +2575,7 @@ nav .container .nav-header .menu {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  z-index: -1;
 }
 
 .ip .container aside .form-wrapper .myform .contact {
@@ -2993,6 +3055,88 @@ nav .container .nav-header .menu {
   }
 }
 
+.payment-body {
+  background: #817E9F;
+}
+
+.payment {
+  height: 52.5rem;
+  background-size: cover;
+  background-position: center center;
+  background-blend-mode: overlay;
+}
+
+.payment .container .form-wrapper {
+  padding: 4.06rem 0;
+}
+
+.payment .container .form-wrapper .myform {
+  width: 18.88rem;
+  margin: 0 auto;
+  height: auto;
+  border-radius: 1.44rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.payment .container .form-wrapper .myform h2 {
+  line-height: 1.75rem;
+  letter-spacing: -0.005em;
+  font-weight: 600;
+  font-size: 2.25rem;
+  margin-bottom: 3rem;
+  letter-spacing: -0.005em;
+  color: #FFFFFF;
+}
+
+.payment .container .form-wrapper .myform h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  letter-spacing: -0.005em;
+  color: #FFFFFF;
+}
+
+.payment .container .form-wrapper .myform input, .payment .container .form-wrapper .myform select {
+  margin: 2.81rem 0 1.44rem;
+  padding-bottom: 1.13rem;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #B8B8B8;
+  color: #fff;
+}
+
+.payment .container .form-wrapper .myform input::placeholder, .payment .container .form-wrapper .myform select::placeholder {
+  color: #d4d4d4;
+}
+
+.payment .container .form-wrapper .myform select {
+  width: 100%;
+  outline: none;
+  max-width: 32.19rem;
+}
+
+.payment .container .form-wrapper .myform select option {
+  color: #000;
+}
+
+.payment .container .form-wrapper .myform .textarea {
+  padding-bottom: 8.19rem;
+}
+
+.payment .container .form-wrapper .myform button {
+  margin-top: 2.75rem;
+}
+
+@media screen and (min-width: 768px) {
+  .payment .container .form-wrapper .myform {
+    width: 37.38rem;
+  }
+  .payment .container .form-wrapper .myform input {
+    width: 32.19rem;
+  }
+}
+
 .home-header {
   position: relative;
   height: 90vh;
@@ -3260,6 +3404,7 @@ nav .container .nav-header .menu {
 
 .about .container .about-img {
   margin-bottom: 3.56rem;
+  z-index: 9999999;
 }
 
 .about .container .about-img img {

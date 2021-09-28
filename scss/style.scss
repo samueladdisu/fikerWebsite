@@ -7,6 +7,7 @@
 @import "blog";
 @import "ip";
 @import "tax";
+@import "payment";
 
 @include header(home, url('../img/court.jpg'),90vh, rgba(0,0,0,0.58));
 .hero{
@@ -94,6 +95,7 @@
     max-width: 88.88rem;
     .about-img{
       margin-bottom: 3.56rem;
+      z-index: 9999999;
       img{
         border-radius: 1rem;
       }

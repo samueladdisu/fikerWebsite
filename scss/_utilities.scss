@@ -122,9 +122,17 @@ body{
   background: transparent;
   color: $primary-color;
   border-color: $primary-color;
+  &:hover{
+    color: #fff;
+    background: $primary-color;
+  }
 }
 .btn-outline-secondary {
   background: transparent;
   color: #fff;
   border-color: #fff;
+  &:hover{
+    color: $primary-color;
+    background: #fff;
+  }
 }

@@ -55,7 +55,7 @@ const practiceAreas = [
         </defs>
         </svg>
         `,
-        title: 'Merger and Acqisition',
+        title: 'Merger and Acquisition',
         text: "Nibh sit eros, eu elit dis augue nam rhoncus ultricies. Sapien morbi sed faucibus consectetur tincidunt.Nibh sit eros, eu elit dis augue nam rhoncus ultricies. ",
         link: './ma.html'
     },

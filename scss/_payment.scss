@@ -1,0 +1,83 @@
+.payment-body{
+  background: $secondary-color;
+}
+
+.payment{
+  height: 52.5rem;
+  background-size: cover;
+  background-position: center center;
+  background-blend-mode: overlay;
+  .container{
+    .form-wrapper{
+      
+      padding: 4.06rem 0;
+      .myform{
+        width: 18.88rem;
+        margin: 0 auto;
+        height: auto;
+        border-radius: 1.44rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2{
+          line-height: 1.75rem;
+          letter-spacing: -0.005em;
+          font-weight: 600;
+          font-size: 2.25rem;
+          margin-bottom: 3rem;
+          letter-spacing: -0.005em;
+          color: #FFFFFF;
+        }
+        h3{
+        
+          font-size: 1.75rem;
+          margin-bottom: 1rem;
+          letter-spacing: -0.005em;
+          color: #FFFFFF;
+        }
+        input, select{
+          margin: 2.81rem 0 1.44rem;
+          padding-bottom: 1.13rem;
+          background: transparent;
+          border: none;
+          border-bottom: 1px solid #B8B8B8;
+          color: #fff;
+          
+          &::placeholder{
+            color: rgb(212, 212, 212);
+          }
+        }
+        select{
+          width: 100%;
+          outline: none;
+          max-width: 32.19rem;
+          option{
+            // background-color: $primary-color;
+            color: #000;
+          }
+        }
+        .textarea{
+          padding-bottom: 8.19rem;
+        }
+        button{
+          margin-top: 2.75rem;
+        }
+      }
+    }
+  }
+}
+
+@include responsive($md){
+  .payment{
+    .container{
+      .form-wrapper{
+        .myform{
+          width: 37.38rem;
+          input{
+            width: 32.19rem;
+          }
+        }
+      }
+    }
+  }
+}
