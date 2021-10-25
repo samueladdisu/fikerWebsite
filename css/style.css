@@ -3404,7 +3404,7 @@ nav .container .nav-header .menu {
 
 .about .container .about-img {
   margin-bottom: 3.56rem;
-  z-index: 9999999;
+  z-index: 1;
 }
 
 .about .container .about-img img {
@@ -3796,4 +3796,3 @@ footer .copyright a {
     width: auto;
   }
 }
-/*# sourceMappingURL=style.css.map */
