@@ -5,6 +5,8 @@
       <th>Name</th>
       <th>Email</th>
       <th>Bank ref Number</th>
+      <th>Amount</th>
+      <th>Status</th>
       <th>Date</th>
     </tr>
   </thead>
@@ -20,6 +22,8 @@
       $name = $row['name'];
       $email = $row['email'];
       $ref_number = $row['ref_number'];
+      $balance = $row['balance'];
+      $status = $row['status'];
       $date = $row['date'];
 
       echo "<tr>";
@@ -27,7 +31,11 @@
       echo "<td>{$name}</td>";
       echo "<td>{$email}</td>";
       echo "<td>{$ref_number}</td>";
+      echo "<td>{$balance} birr</td>";
+      echo "<td>{$status}</td>";
       echo "<td>{$date}</td>";
+      echo "<td><a href='view_confirm_payment.php?confirm=$id&email=$email'>Confirm</a></td>";
+      echo "<td><a href='view_confirm_payment.php?unconfirm=$id'>Not Confirm</a></td>";
       echo "</tr>";
     }
 
@@ -36,34 +44,51 @@
 
   </tbody>
 </table>
+<?php 
 
-<?php
 
-
-if (isset($_GET['unapprove'])) {
-  $the_comment_id = $_GET['unapprove'];
-  $query = "UPDATE comments SET comment_status = 'unapproved' WHERE comment_id = $the_comment_id";
+if (isset($_GET['confirm'])) {
+  $the_confirm_id = escape($_GET['confirm']);
+  $the_confirm_email = escape($_GET['email']);
+  echo "$the_confirm_email";
+  $query = "UPDATE confirm_payment SET status = 'confirmed' WHERE id = $the_confirm_id";
   $result = mysqli_query($connection, $query);
 
   confirm($result);
-  header("Location: ./comments.php");
+              $to = "$the_confirm_email";
+              $subject = "Thank you";
+              // To send HTML mail, the Content-type header must be set
+              $headers  = 'MIME-Version: 1.0' . "\r\n";
+              $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+
+              // Create email headers
+              $headers .= 'From: ' . 'support@fikirlaw.com' . "\r\n" .
+                'Reply-To: ' . 'support@fikirlaw.com' . "\r\n" .
+                'X-Mailer: PHP/' . phpversion();
+
+              // Compose a simple HTML email message
+              $message = "<h1>Your payment is confirmed thank you!</h1>";
+
+              if (mail($to, $subject, $message, $headers)) {
+                echo ("<script> alert('email sent successfully');</script>");
+              } else {
+                 echo ("<script> alert('email not sent');</script>");
+              }
+  
+  header("Location: ./view_confirm_payment.php");
 }
 
-if (isset($_GET['approve'])) {
-  $the_comment_id = $_GET['approve'];
-  $query = "UPDATE comments SET comment_status = 'approved' WHERE comment_id = $the_comment_id";
+if (isset($_GET['unconfirm'])) {
+  $the_confirm_id = escape($_GET['unconfirm']);
+  $query = "UPDATE confirm_payment SET status = 'not confirmed' WHERE id = $the_confirm_id";
   $result = mysqli_query($connection, $query);
 
   confirm($result);
-  header("Location: ./comments.php");
+  
+  header("Location: ./view_confirm_payment.php");
 }
 
-if (isset($_GET['delete_comment'])) {
-  $the_comment_id = $_GET['delete_comment'];
-  $query = "DELETE FROM comments WHERE comment_id = $the_comment_id";
-  $result = mysqli_query($connection, $query);
-
-  confirm($result);
-  header("Location: ./comments.php");
-}
 ?>
+
+
+

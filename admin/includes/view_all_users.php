@@ -52,7 +52,7 @@
 
 
 if (isset($_GET['admin'])) {
-  $the_user_id = $_GET['admin'];
+  $the_user_id = escape($_GET['admin']);
   $query = "UPDATE users SET user_role = 'Admin' WHERE user_id = $the_user_id";
   $result = mysqli_query($connection, $query);
 
@@ -61,7 +61,7 @@ if (isset($_GET['admin'])) {
 }
 
 if (isset($_GET['author'])) {
-  $the_user_id = $_GET['author'];
+  $the_user_id = escape($_GET['author']);
   $query = "UPDATE users SET user_role = 'Author' WHERE user_id = $the_user_id";
   $result = mysqli_query($connection, $query);
 
@@ -70,7 +70,7 @@ if (isset($_GET['author'])) {
 }
 
 if (isset($_GET['delete'])) {
-  $the_user_id = $_GET['delete'];
+  $the_user_id = escape($_GET['delete']);
   $query = "DELETE FROM users WHERE user_id = $the_user_id";
   $result = mysqli_query($connection, $query);
 

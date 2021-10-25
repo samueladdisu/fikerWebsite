@@ -1,10 +1,10 @@
 <?php
   if(isset($_POST['create_client'])){
-    $client_name = $_POST['client_name'];
-    $client_phone = $_POST['client_phone'];
-    $client_email = $_POST['client_email'];
-    $client_number = $_POST['client_number'];
-    $client_balance = $_POST['client_balance'];
+    $client_name = escape($_POST['client_name']);
+    $client_phone = escape($_POST['client_phone']);
+    $client_email = escape($_POST['client_email']);
+    $client_number = escape($_POST['client_number']);
+    $client_balance = escape($_POST['client_balance']);
 
     $query = "INSERT INTO clients(client_name, client_phone, client_email, client_number, client_balance ) ";
     $query .= "VALUES('$client_name','$client_phone','$client_email','$client_number','$client_balance' ) ";

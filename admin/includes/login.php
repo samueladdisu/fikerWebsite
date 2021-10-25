@@ -1,11 +1,12 @@
 <?php include  '../../includes/db.php'; ?>
+<?php include  'functions.php'; ?>
 <?php session_start(); ?>
 
 <?php 
 
   if(isset($_POST['login'])){
-    $user_name =  mysqli_real_escape_string($connection,$_POST['user_name']);
-    $user_password = mysqli_real_escape_string($connection,$_POST['user_password']);
+    $user_name =  escape($_POST['user_name']);
+    $user_password = escape($_POST['user_password']);
 
     $query = "SELECT * FROM users WHERE user_name = '$user_name' ";
     $select_user = mysqli_query($connection, $query);

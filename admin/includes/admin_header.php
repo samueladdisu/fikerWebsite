@@ -1,5 +1,6 @@
 <?php ob_start(); ?>
 <?php include  '../includes/db.php'; ?>
+<?php include  'functions.php'; ?>
 <?php session_start(); ?>
 
 <?php 
@@ -11,18 +12,7 @@
 
 
 ?>
-<?php 
 
-function confirm($result){
-
-    global $connection;
-    if(!$result){
-        die('QUERY FAILED '. mysqli_error($connection));
-      }
-}
-
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 

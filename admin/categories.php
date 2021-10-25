@@ -33,7 +33,7 @@
                             <?php
 
                             if (isset($_POST['submit'])) {
-                                $cat_title = $_POST['cat_title'];
+                                $cat_title = escape($_POST['cat_title']);
                                 if ($cat_title == "") {
                                     echo "<script> alert('Please Enter Category Title');</script>";
                                 } else {
@@ -64,7 +64,7 @@
 
                                 <?php 
                                     if(isset($_GET['edit'])){
-                                        $cat_id = $_GET['edit'];
+                                        $cat_id = escape($_GET['edit']);
                                         include './includes/update_categories.php';
                                     }
                                 
@@ -112,7 +112,7 @@
                                     <?php
                                     // Delete Categories from data base
                                     if (isset($_GET['delete'])) {
-                                        $the_cat_id = $_GET['delete'];
+                                        $the_cat_id = escape($_GET['delete']);
                                         $query = "DELETE FROM categories WHERE cat_id = {$the_cat_id} ";
                                         $delete = mysqli_query($connection, $query);
 
