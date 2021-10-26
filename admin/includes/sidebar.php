@@ -40,7 +40,20 @@
                     </div>
                 </div>
             </li>
-
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-newspaper fa-2x text-gray-300"></i>
+                    <span>Proclamations</span>
+                    <i style="margin-left: 3rem; font-size: 0.8rem;" class="fas fa-chevron-down  text-gray-300"></i>
+                </a>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="./proclamations.php">View All Proclamations</a>
+                        <a class="collapse-item" href="./proclamations.php?source=add_proclamation">Add Proclamation</a>
+                    </div>
+                </div>
+            </li>
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link" href="./categories.php">

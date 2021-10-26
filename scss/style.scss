@@ -106,7 +106,7 @@
       line-height: 2.44rem;
       padding-bottom: 3.56rem;
       text-align: center;
-      z-index: 999999;
+      z-index: 1;
       p{
         margin-bottom: 3.56rem;
       }
@@ -156,12 +156,12 @@
     max-width: 78.88rem;
     .pa-card{
       width: 20.75rem;
-      height: 21.5rem;
+      height: 22.5rem;
       background: #FFFFFF;
       box-shadow: 2px 2px 28px rgba(0, 0, 0, 0.25);
       border-radius: 1.875rem;
       margin-top: 3.06rem;
-      padding: 2rem 1.63rem 0;
+      padding: 2rem 1.63rem 1.43rem;
       transition: background 0.3s linear;
       &:hover{
         background: $primary-color;

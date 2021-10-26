@@ -16,7 +16,9 @@ const practiceAreas = [
         </defs>
         </svg>`,
         title: 'Corporate and Business Law',
-        text: "Nibh sit eros, eu elit dis augue nam rhoncus ultricies. Sapien morbi sed faucibus consectetur tincidunt.Nibh sit eros, eu elit dis augue nam rhoncus ultricies. ",
+        text: `We will help you keep tabs on all your business transaction and deals
+        Our team of corporate and business lawyers will make sure all your business transaction and deals falls in the
+        right place.`,
         link: './corporate.html'
     },
     {
@@ -39,7 +41,11 @@ const practiceAreas = [
         </svg>
         `,
         title: 'Tax Law',
-        text: "Nibh sit eros, eu elit dis augue nam rhoncus ultricies. Sapien morbi sed faucibus consectetur tincidunt.Nibh sit eros, eu elit dis augue nam rhoncus ultricies. ",
+        text: ` Our experts are
+        extremely qualified to handle legal tax matters, such as settling back taxes, helping with unfiled returns,
+        halting wage garnishment, undoing property liens and account levies.
+
+      `,
         link: './tax.html'
     },
     {
@@ -56,7 +62,10 @@ const practiceAreas = [
         </svg>
         `,
         title: 'Merger and Acquisition',
-        text: "Nibh sit eros, eu elit dis augue nam rhoncus ultricies. Sapien morbi sed faucibus consectetur tincidunt.Nibh sit eros, eu elit dis augue nam rhoncus ultricies. ",
+        text: `
+        We know the merging and acquisitions process can be a bit awful. Dealing with all accountants, stockbrokers,
+        and other business experts and extra. Our teams of experts will help you with
+        acquiring or merging two companies.`,
         link: './ma.html'
     },
     {
@@ -75,7 +84,9 @@ const practiceAreas = [
         </svg>
         `,
         title: 'Family and succession',
-        text: "Nibh sit eros, eu elit dis augue nam rhoncus ultricies. Sapien morbi sed faucibus consectetur tincidunt.Nibh sit eros, eu elit dis augue nam rhoncus ultricies. ",
+        text: ` We work hard to
+        assist families and couples with a range of family law services, including complex divorce cases, financial
+        arrangements, cohabitation agreements, child arrangements and all related divorce and family issues`,
         link: './family.html'
     },
     {

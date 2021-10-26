@@ -27,7 +27,8 @@ function head(bannerClass){
            <li>
              <a href="./careers.html" class="scroll-link">Careers</a>
            </li>
-           <li><a href="./proclamation.php" class="scroll-link">Proclamation</a></li>
+           <li><a href="./proclamation.php" class="scroll-link">Blog</a></li>
+           <li><a href="./proclamation2.php" class="scroll-link">Proclamations</a></li>
            <li><a href="./contact.html" class="scroll-link">Contact</a></li>
          </ul>
        </div>
@@ -78,7 +79,8 @@ function head(bannerClass){
             <li>
               <a href="./careers.html" class="scroll-link">Careers</a>
             </li>
-            <li><a href="./proclamation.php" class="scroll-link">Proclamation</a></li>
+            <li><a href="./proclamation.php" class="scroll-link">Blog</a></li>
+            <li><a href="./proclamation2.php" class="scroll-link">Proclamations</a></li>
             <li><a href="./contact.html" class="scroll-link">Contact</a></li>
           </ul>
         </div>
@@ -120,7 +122,8 @@ function head(bannerClass){
            <li>
              <a href="./careers.html" class="scroll-link">Careers</a>
            </li>
-           <li><a href="./proclamation.php" class="scroll-link">Proclamation</a></li>
+           <li><a href="./proclamation.php" class="scroll-link">Blog</a></li>
+           <li><a href="./proclamation2.php" class="scroll-link">Proclamations</a></li>
            <li><a href="./contact.html" class="scroll-link">Contact</a></li>
          </ul>
        </div>
@@ -209,7 +212,8 @@ function foot (){
         <li><a href="./index.html">Home</a></li>
         <li><a href="./about.html">About</a></li>
         <li><a href="./careers.html">Careers</a></li>
-        <li><a href="./proclamation.php">Proclamation</a></li>
+        <li><a href="./proclamation.php" class="scroll-link">Blog</a></li>
+        <li><a href="./proclamation2.php" class="scroll-link">Proclamations</a></li>
         <li><a href="./contact.html">Contact</a></li>
       </ul>
     </div>
