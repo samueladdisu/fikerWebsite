@@ -991,6 +991,7 @@ nav .container .nav-header .menu {
 
 .ourstory .container {
   max-width: 78.88rem;
+  align-items: center;
 }
 
 .ourstory .container .about-img {
@@ -998,7 +999,8 @@ nav .container .nav-header .menu {
 }
 
 .ourstory .container .about-img img {
-  border-radius: 1rem;
+  width: 30rem;
+  border-radius: 3rem;
 }
 
 .ourstory .container .about-text {
@@ -1056,6 +1058,7 @@ nav .container .nav-header .menu {
 }
 
 .team .container .single-team .team-pic {
+  width: 15rem;
   margin-bottom: 2.19rem;
 }
 
@@ -3400,6 +3403,7 @@ nav .container .nav-header .menu {
 
 .about .container {
   max-width: 88.88rem;
+  align-items: center;
 }
 
 .about .container .about-img {

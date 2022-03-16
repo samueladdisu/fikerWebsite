@@ -5,10 +5,12 @@
     
     .container{
       max-width: 78.88rem;
+      align-items: center;
       .about-img{
         margin-bottom: 3.56rem;
         img{
-          border-radius: 1rem;
+          width: 30rem;
+          border-radius: 3rem;
         }
       }
       .about-text{
@@ -75,6 +77,7 @@
               align-items: center;
               margin-bottom: 2.2rem;
             .team-pic{
+              width: 15rem;
                 margin-bottom: 2.19rem;
             }
             .team-name{
