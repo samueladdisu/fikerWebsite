@@ -1,8 +1,8 @@
-function head(bannerClass){
-    const header = document.getElementById('header')
+function head(bannerClass) {
+  const header = document.getElementById('header')
 
-    if(bannerClass == "home"){
-      header.innerHTML = `<nav class="nav">
+  if (bannerClass == "home") {
+    header.innerHTML = `<nav class="nav">
      <div class="container">
        <div class="nav-header">
          <div class="logo">
@@ -19,8 +19,15 @@ function head(bannerClass){
            <li class="drop-down">
            <a href="#" class="scroll-link solution"> Practice Areas <span><img src="./img/dropdown.svg" class="down-icon"></span>  </a>
            <ul class="drop-down-link">
-               <li><a href="./tax.html">Tax Law</a></li>
+               <li><a href="./family.html">Family</a></li>
+               <li><a href="./succession.html">Succession</a></li>
+               <li><a href="./employee.html">Employee and Employment</a></li>
+               <li><a href="./construction.html">Construction</a></li>
+               <li><a href="./contract.html">Contract</a></li>
+               <li><a href="./commercial.html">Commercial and Bussiness</a></li>
                <li><a href="./ip.html">Intellectual Property</a></li>
+               <li><a href="./insurance.html">Insurance</a></li>
+               <li><a href="./transport.html">Transport</a></li>
            </ul>
        
        </li>
@@ -39,11 +46,10 @@ function head(bannerClass){
    <div class="container hero">
    <div class="headline">
      <h1 class="title">
-       Committed To Achieving Successful Results For Our Clients.
+     ABOUT FIKIR LEGAL SERVICE 
      </h1>
      <p class="subtitle">
-       In ac viverra natoque in nisl, pretium. Phasellus quisque egestas
-       nullam erat at egestas.
+     Fikir legal service has been established on 2016. By MS. Fikir Mulugeta Gebrewold The past five year we are dealing with different civil and criminal cases 
      </p>
      <a href="./contact.html" class="btn btn-primary">
        Request A Free Consultation
@@ -51,8 +57,8 @@ function head(bannerClass){
    </div>
  </div>   
    </div>`
-    }else if(bannerClass == 'career'){
-      header.innerHTML = `<nav class="nav">
+  } else if (bannerClass == 'career') {
+    header.innerHTML = `<nav class="nav">
       <div class="container">
         <div class="nav-header">
           <div class="logo">
@@ -71,10 +77,17 @@ function head(bannerClass){
             <li class="drop-down">
            <a href="#" class="scroll-link solution"> Practice Areas <span><img src="./img/dropdown.svg" class="down-icon"></span>  </a>
            <ul class="drop-down-link">
-               <li><a href="./tax.html">Tax Law</a></li>
-               <li><a href="./ip.html">Intellectual Property</a></li>
-           </ul>
-       
+           <li><a href="./family.html">Family</a></li>
+           <li><a href="./succession.html">Succession</a></li>
+           <li><a href="./employee.html">Employee and Employment</a></li>
+           <li><a href="./construction.html">Construction</a></li>
+           <li><a href="./contract.html">Contract</a></li>
+           <li><a href="./commercial.html">Commercial and Bussiness</a></li>
+           <li><a href="./ip.html">Intellectual Property</a></li>
+           <li><a href="./insurance.html">Insurance</a></li>
+           <li><a href="./transport.html">Transport</a></li>
+       </ul>
+   
        </li>
             <li>
               <a href="./careers.html" class="scroll-link">Careers</a>
@@ -96,8 +109,8 @@ function head(bannerClass){
     </div>
   </div>   
     </div>`
-    } else{
-      header.innerHTML = `<nav class="nav">
+  } else {
+    header.innerHTML = `<nav class="nav">
      <div class="container">
        <div class="nav-header">
          <div class="logo">
@@ -114,9 +127,17 @@ function head(bannerClass){
            <li class="drop-down">
            <a href="#" class="scroll-link solution"> Practice Areas <span><img src="./img/dropdown.svg" class="down-icon"></span>  </a>
            <ul class="drop-down-link">
-               <li><a href="./tax.html">Tax Law</a></li>
-               <li><a href="./ip.html">Intellectual Property</a></li>
-           </ul>
+           <li><a href="./family.html">Family</a></li>
+           <li><a href="./succession.html">Succession</a></li>
+           <li><a href="./employee.html">Employee and Employment</a></li>
+           <li><a href="./construction.html">Construction</a></li>
+           <li><a href="./contract.html">Contract</a></li>
+           <li><a href="./commercial.html">Commercial and Bussiness</a></li>
+           <li><a href="./ip.html">Intellectual Property</a></li>
+           <li><a href="./insurance.html">Insurance</a></li>
+           <li><a href="./transport.html">Transport</a></li>
+       </ul>
+   
        
        </li>
            <li>
@@ -133,62 +154,59 @@ function head(bannerClass){
    <div class="${bannerClass}-banner">
      
    </div>`
-    }
-     
-    const linksContainer = document.querySelector('.links-container');
-    const nav = document.querySelector('.nav');
-    const logo = document.querySelector('.logo');
-    const menu = document.querySelector('.menu');
-    const links = linksContainer.querySelectorAll('.nav-links li a')
-    menu.addEventListener('click', () =>{
-        
-        linksContainer.classList.toggle('show-links');
-    })
-    window.addEventListener('scroll', ()=>{
-        const navheight = nav.getBoundingClientRect().height;
-        const scorllheight = window.pageYOffset;
-        const down = document.querySelector('.down-icon')
-        if(scorllheight > navheight)
-        {
-            menu.innerHTML = ` <img src="./img/menu-black.svg" class="ham" alt="" />`
-            links.forEach(item =>{
-                item.classList.add('black')
-            })
-            down.setAttribute('src', './img/dropdown-black.svg')
-            logo.innerHTML = `<a href="./index.html"><img src="./img/second_logo.svg" alt="Battery World Logo"></a>`
-            nav.classList.add('fixed-nav')
-        }else{
-            logo.innerHTML = `<a href="./index.html"><img src="./img/fiker_logo.svg" alt="Fiker legal service Logo" /> </a>`
-            nav.classList.remove('fixed-nav')
-            down.setAttribute('src', './img/dropdown.svg')
-            menu.innerHTML = ` <img src="./img/menu-white.svg" class="ham" alt="" />`
-            links.forEach(item =>{
-                item.classList.remove('black')
-            })
-        }
-    })
-    const dropdown = document.querySelector('.drop-down')
-    const dropdownContent = document.querySelector('.drop-down-link')
- 
-    dropdown.addEventListener('mouseenter', () => {
-        
-        dropdownContent.classList.add('display-links')
-    })
-    dropdown.addEventListener('mouseleave', () => {
+  }
 
-        dropdownContent.classList.remove('display-links')
-    })
+  const linksContainer = document.querySelector('.links-container');
+  const nav = document.querySelector('.nav');
+  const logo = document.querySelector('.logo');
+  const menu = document.querySelector('.menu');
+  const links = linksContainer.querySelectorAll('.nav-links li a')
+  menu.addEventListener('click', () => {
+
+    linksContainer.classList.toggle('show-links');
+  })
+  window.addEventListener('scroll', () => {
+    const navheight = nav.getBoundingClientRect().height;
+    const scorllheight = window.pageYOffset;
+    const down = document.querySelector('.down-icon')
+    if (scorllheight > navheight) {
+      menu.innerHTML = ` <img src="./img/menu-black.svg" class="ham" alt="" />`
+      links.forEach(item => {
+        item.classList.add('black')
+      })
+      down.setAttribute('src', './img/dropdown-black.svg')
+      logo.innerHTML = `<a href="./index.html"><img src="./img/second_logo.svg" alt="Battery World Logo"></a>`
+      nav.classList.add('fixed-nav')
+    } else {
+      logo.innerHTML = `<a href="./index.html"><img src="./img/fiker_logo.svg" alt="Fiker legal service Logo" /> </a>`
+      nav.classList.remove('fixed-nav')
+      down.setAttribute('src', './img/dropdown.svg')
+      menu.innerHTML = ` <img src="./img/menu-white.svg" class="ham" alt="" />`
+      links.forEach(item => {
+        item.classList.remove('black')
+      })
+    }
+  })
+  const dropdown = document.querySelector('.drop-down')
+  const dropdownContent = document.querySelector('.drop-down-link')
+
+  dropdown.addEventListener('mouseenter', () => {
+
+    dropdownContent.classList.add('display-links')
+  })
+  dropdown.addEventListener('mouseleave', () => {
+
+    dropdownContent.classList.remove('display-links')
+  })
 }
 
-function foot (){
-    const footer = document.getElementById('footer')
-    footer.innerHTML = ` <div class="container row">
+function foot() {
+  const footer = document.getElementById('footer')
+  footer.innerHTML = ` <div class="container row">
     <div class="about-footer col-md-6 col-xl-4">
       <img src="./img/second_logo.svg" class="footer-logo" alt="" />
       <p>
-        Curabitur senectus tellus diam aliquam, sed. Vivamus eget sit amet
-        etiam. Sed sit eget vel viverra cursus proin condimentum. Molestie
-        scelerisque amet vitae turpis pulvinar commodo.
+      “We deliver our promises .For a satisfaction granted service visit Fikir Legal Services.”
       </p>
       <div class="footer-social">
         <a href="#">
@@ -222,11 +240,15 @@ function foot (){
       <h2>Practice Areas</h2>
 
       <ul>
-        <li><a href="#">Corporate and Buisness Law</a></li>
-        <li><a href="./tax.html">Tax Law</a></li>
-        <li><a href="#">Merger and Aquisition</a></li>
-        <li><a href="#">Family and Succession</a></li>
-        <li><a href="./ip.html">Intellectual Property</a></li>
+      <li><a href="./family.html">Family</a></li>
+      <li><a href="./succession.html">Succession</a></li>
+      <li><a href="./employee.html">Employee and Employment</a></li>
+      <li><a href="./construction.html">Construction</a></li>
+      <li><a href="./contract.html">Contract</a></li>
+      <li><a href="./commercial.html">Commercial and Bussiness</a></li>
+      <li><a href="./ip.html">Intellectual Property</a></li>
+      <li><a href="./insurance.html">Insurance</a></li>
+      <li><a href="./transport.html">Transport</a></li>
       </ul>
     </div>
 
@@ -278,4 +300,4 @@ function foot (){
   </p>`
 }
 
-export { head, foot}
+export { head, foot }

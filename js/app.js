@@ -15,11 +15,11 @@ const practiceAreas = [
         </clipPath>
         </defs>
         </svg>`,
-        title: 'Corporate and Business Law',
+        title: 'Commercial & Bussiness',
         text: `We will help you keep tabs on all your business transaction and deals
         Our team of corporate and business lawyers will make sure all your business transaction and deals falls in the
         right place.`,
-        link: './corporate.html'
+        link: './commercial.html'
     },
     {
         id: 2,
@@ -46,7 +46,7 @@ const practiceAreas = [
         halting wage garnishment, undoing property liens and account levies.
 
       `,
-        link: './tax.html'
+        link: './succession.html'
     },
     {
         id: 3,
@@ -61,12 +61,12 @@ const practiceAreas = [
         </defs>
         </svg>
         `,
-        title: 'Merger and Acquisition',
+        title: 'Contract',
         text: `
         We know the merging and acquisitions process can be a bit awful. Dealing with all accountants, stockbrokers,
         and other business experts and extra. Our teams of experts will help you with
         acquiring or merging two companies.`,
-        link: './ma.html'
+        link: './contract   .html'
     },
     {
         id: 4,
@@ -121,8 +121,8 @@ const paContainer = document.querySelector('.practice-areas .container')
 head("home")
 foot()
 
-const paInner = practiceAreas.map(item =>{
-    if(item.id === 5){
+const paInner = practiceAreas.map(item => {
+    if (item.id === 5) {
         return `<div class=" col-md-6 col-md-offset-3 col-xl-offset-0 col-xl-4">
                 <div class="pa-card">
                  ${item.img}
@@ -135,7 +135,7 @@ const paInner = practiceAreas.map(item =>{
                 <a href="${item.link}">Learn More</a>
                 </div>
             </div>`
-    }else if(item.id === 4){
+    } else if (item.id === 4) {
         return `<div class=" col-md-6 col-xl-4 col-xl-offset-2">
                 <div class="pa-card">
                 ${item.img}
@@ -148,7 +148,7 @@ const paInner = practiceAreas.map(item =>{
                 <a href="${item.link}">Learn More</a>
                 </div>
             </div>`
-    }else{
+    } else {
         return `<div class=" col-md-6 col-xl-4">
         <div class="pa-card">
           ${item.img}
@@ -171,31 +171,31 @@ const prevBtn = document.querySelector('.prev')
 const slides = document.querySelectorAll('.single-test')
 
 
-slides.forEach( (slide, index) =>{
+slides.forEach((slide, index) => {
     slide.style.left = `${index * 100}%`
 })
 
 let counter = 0;
 
-nextBtn.addEventListener('click', () =>{
+nextBtn.addEventListener('click', () => {
     counter++
-    if(counter > slides.length -1){
-        counter=0;
+    if (counter > slides.length - 1) {
+        counter = 0;
     }
     carousel()
-      
+
 })
 
-prevBtn.addEventListener('click', () =>{
+prevBtn.addEventListener('click', () => {
     counter--
-    if(counter < 0){
-        counter = slides.length -1
+    if (counter < 0) {
+        counter = slides.length - 1
     }
     carousel()
 })
 
-function carousel(){
-    
+function carousel() {
+
     slides.forEach(function (slide) {
         slide.style.transform = `translateX(-${counter * 100}%)`;
     });

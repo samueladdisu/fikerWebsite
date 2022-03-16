@@ -3408,7 +3408,8 @@ nav .container .nav-header .menu {
 }
 
 .about .container .about-img img {
-  border-radius: 1rem;
+  width: 40rem;
+  border-radius: 3rem;
 }
 
 .about .container .about-text {
@@ -3483,13 +3484,17 @@ nav .container .nav-header .menu {
   cursor: pointer;
 }
 
-.practice-areas .container .pa-card:hover .pa-card-title, .practice-areas .container .pa-card:hover .pa-card-text, .practice-areas .container .pa-card:hover a,
+.practice-areas .container .pa-card:hover .pa-card-title,
+.practice-areas .container .pa-card:hover .pa-card-text,
+.practice-areas .container .pa-card:hover a,
 .practice-areas .container .pa-card:hover svg path {
   color: #fff;
   fill: #fff;
 }
 
-.practice-areas .container .pa-card svg, .practice-areas .container .pa-card .pa-card-title, .practice-areas .container .pa-card .pa-card-text {
+.practice-areas .container .pa-card svg,
+.practice-areas .container .pa-card .pa-card-title,
+.practice-areas .container .pa-card .pa-card-text {
   margin-bottom: 0.8125rem;
 }
 
@@ -3634,19 +3639,22 @@ nav .container .nav-header .menu {
   .testimonial .container {
     height: 46.81rem;
   }
-  .testimonial .testi-bottom, .testimonial .testi-top {
+  .testimonial .testi-bottom,
+  .testimonial .testi-top {
     width: 10rem;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .testimonial .testi-bottom, .testimonial .testi-top {
+  .testimonial .testi-bottom,
+  .testimonial .testi-top {
     width: 15rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .testimonial .testi-top, .testimonial .testi-bottom {
+  .testimonial .testi-top,
+  .testimonial .testi-bottom {
     width: auto;
   }
   .testimonial h2 {

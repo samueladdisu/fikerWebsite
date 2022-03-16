@@ -9,80 +9,91 @@
 @import "tax";
 @import "payment";
 
-@include header(home, url('../img/court.jpg'),90vh, rgba(0,0,0,0.58));
-.hero{
+@include header(home, url('../img/court.jpg'), 90vh, rgba(0, 0, 0, 0.58));
+
+.hero {
   height: 100%;
   width: 100%;
   display: grid;
   place-items: center;
   text-align: center;
 }
-.headline{
+
+.headline {
   z-index: 999999;
   display: grid;
   place-items: center;
-  .title{
+
+  .title {
     font-size: 2rem;
     color: #fff;
     font-weight: 600;
     width: 20.625rem;
   }
-  .subtitle{
+
+  .subtitle {
     color: #fff;
     line-height: 2rem;
     font-size: 0.88rem;
     letter-spacing: -0.005rem;
     width: 19rem;
   }
-  a{  
+
+  a {
     font-size: 1rem;
     margin-top: 2rem;
     padding: 1.5rem 2.69rem;
   }
-}  
-@include responsive($md){
-  .headline{
-    .subtitle{
+}
+
+@include responsive($md) {
+  .headline {
+    .subtitle {
       font-size: 1.5rem;
       width: 35rem;
     }
-    .title{
+
+    .title {
       font-size: 3rem;
       width: 80%;
       max-width: 62.44rem;
     }
-    a{
+
+    a {
       font-size: 1.15rem;
       padding: 1rem 4rem;
     }
   }
 }
 
-@include responsive($lg){
-  .headline{
-    
-    .title{
+@include responsive($lg) {
+  .headline {
+
+    .title {
       font-size: 3rem;
       width: 90%;
     }
-    .subtitle{
+
+    .subtitle {
       font-size: 1.38rem;
       width: 80%;
     }
   }
 }
 
-.about{
+.about {
   background: $secondary-color;
   color: #fff;
   position: relative;
-  .about-bg{
+
+  .about-bg {
     position: absolute;
     top: 0;
     width: 100%;
     z-index: 1;
   }
-  .about-title{
+
+  .about-title {
     text-align: center;
     font-size: 1.75rem;
     font-weight: 600;
@@ -91,34 +102,43 @@
     padding-bottom: 4.31rem;
     width: 21.38rem;
   }
-  .container{
+
+  .container {
     max-width: 88.88rem;
-    .about-img{
+
+    .about-img {
+
       margin-bottom: 3.56rem;
       z-index: 1;
-      img{
-        border-radius: 1rem;
+
+      img {
+width: 40rem;
+        border-radius: 3rem;
       }
     }
-    .about-text{
+
+    .about-text {
       width: 21.44rem;
       margin: 0 auto;
       line-height: 2.44rem;
       padding-bottom: 3.56rem;
       text-align: center;
       z-index: 1;
-      p{
+
+      p {
         margin-bottom: 3.56rem;
       }
     }
   }
 }
-@include responsive($md){
-  .about{
-    .container{
-      .about-text{
+
+@include responsive($md) {
+  .about {
+    .container {
+      .about-text {
         width: 100%;
-        p{
+
+        p {
           width: 100%;
         }
       }
@@ -126,35 +146,41 @@
   }
 }
 
-@include responsive($lg){
-  .about{
-    .about-title{
+@include responsive($lg) {
+  .about {
+    .about-title {
       font-size: 2.25rem;
       width: auto;
     }
   }
 }
-.practice-areas{
+
+.practice-areas {
   position: relative;
   padding-bottom: 11.3rem;
   padding-top: 7.94rem;
-  .top-graphic{
+
+  .top-graphic {
     position: absolute;
     top: -4rem;
   }
-  .bottom-graphic{
+
+  .bottom-graphic {
     position: absolute;
     bottom: -1rem;
     right: 0;
   }
-  .practice-title{
+
+  .practice-title {
     font-size: 1.75rem;
     font-weight: 600;
     color: $primary-color;
   }
-  .container{
+
+  .container {
     max-width: 78.88rem;
-    .pa-card{
+
+    .pa-card {
       width: 20.75rem;
       height: 22.5rem;
       background: #FFFFFF;
@@ -163,69 +189,84 @@
       margin-top: 3.06rem;
       padding: 2rem 1.63rem 1.43rem;
       transition: background 0.3s linear;
-      &:hover{
+
+      &:hover {
         background: $primary-color;
         cursor: pointer;
       }
-      &:hover .pa-card-title, &:hover .pa-card-text, &:hover a,
-      &:hover svg path{
+
+      &:hover .pa-card-title,
+      &:hover .pa-card-text,
+      &:hover a,
+      &:hover svg path {
         color: #fff;
         fill: #fff;
       }
-      svg, .pa-card-title, .pa-card-text{
+
+      svg,
+      .pa-card-title,
+      .pa-card-text {
         margin-bottom: 0.8125rem;
       }
-      .pa-card-text{
+
+      .pa-card-text {
         line-height: 1.625rem;
       }
-      .pa-card-title{
+
+      .pa-card-title {
         font-size: 1.25rem;
         font-weight: 600;
         color: $primary-color;
       }
-      a{
+
+      a {
         color: $primary-color;
         text-decoration: underline;
       }
     }
   }
 }
-@include responsive($lg){
-  .practice-areas{
-    .container{
-      .pa-card{
+
+@include responsive($lg) {
+  .practice-areas {
+    .container {
+      .pa-card {
         width: 25.25rem;
       }
     }
   }
 }
 
-@include responsive($xl){
-  .practice-areas{
-    .practice-title{
+@include responsive($xl) {
+  .practice-areas {
+    .practice-title {
       font-size: 2.63rem;
     }
   }
 }
-.recognition{
+
+.recognition {
   height: 17.1875rem;
-  background: rgba(0,0,0,0.5) url('../img/reco-bg.jpg') no-repeat;
+  background: rgba(0, 0, 0, 0.5) url('../img/reco-bg.jpg') no-repeat;
   background-size: cover;
   background-position: center center;
   background-blend-mode: overlay;
-  .container{
-    .reco{
+
+  .container {
+    .reco {
       padding-top: 6.25rem;
       color: #fff;
       display: flex;
       align-items: center;
       gap: 1rem;
-      .reco-text{
-        h2{
+
+      .reco-text {
+        h2 {
           font-size: 2.625rem;
           font-weight: 600;
         }
-        p{
+
+        p {
           font-size: 1rem;
           line-height: 1rem;
           letter-spacing: 0.17em;
@@ -236,41 +277,48 @@
   }
 }
 
-.testimonial{
+.testimonial {
   position: relative;
-  .absolute{
+
+  .absolute {
     position: absolute;
     width: 5.6875rem;
   }
-  .testi-top{
+
+  .testi-top {
     @extend .absolute;
     top: 0;
     right: 0;
   }
-  .testi-bottom{
-    @extend  .absolute;
+
+  .testi-bottom {
+    @extend .absolute;
     bottom: 0;
     left: 0;
   }
-  h2{
+
+  h2 {
     font-size: 1.75rem;
     font-weight: 700;
     color: $primary-color;
     padding-top: 5.3125rem;
   }
-  .container{
+
+  .container {
     display: flex;
     height: 50.81rem;
     max-width: 32.25rem;
     position: relative;
     overflow: hidden;
-    .single-test{
+
+    .single-test {
       width: 100%;
       position: absolute;
       display: flex;
       align-items: center;
       flex-direction: column;
       transition: all 0.25s ease-in-out;
+
       // &:nth-child(1){
       //   left: -100%;
       // }
@@ -280,34 +328,39 @@
       // &:nth-child(3){
       //   left: 100%;
       // }
-      .test-photo{
+      .test-photo {
         padding-top: 4.375rem;
         padding-bottom: 3.125rem;
       }
-      .quote{
+
+      .quote {
         padding-bottom: 1.625rem;
       }
-      .test-text{
+
+      .test-text {
         line-height: 1.875rem;
         text-align: center;
         letter-spacing: -0.005em;
         max-width: 38.75rem;
       }
-      .test-name{
+
+      .test-name {
         padding-top: 3rem;
         font-weight: bold;
         font-size: 1.125rem;
         line-height: 2.125rem;
         letter-spacing: -0.005em;
       }
-      small{
+
+      small {
         font-size: 14px;
       }
-      
+
     }
-    
+
   }
-  .btn-container{
+
+  .btn-container {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -319,46 +372,56 @@
   }
 }
 
-@include responsive($md){
-  .testimonial{
-    .container{
+@include responsive($md) {
+  .testimonial {
+    .container {
       height: 46.81rem;
     }
-    .testi-bottom, .testi-top{
+
+    .testi-bottom,
+    .testi-top {
       width: 10rem;
     }
   }
 }
 
-@include responsive($lg){
-  .testimonial{
-    .testi-bottom, .testi-top{
+@include responsive($lg) {
+  .testimonial {
+
+    .testi-bottom,
+    .testi-top {
       width: 15rem;
     }
   }
 }
 
-@include responsive($xl){
-  .testimonial{
-    .testi-top, .testi-bottom{
+@include responsive($xl) {
+  .testimonial {
+
+    .testi-top,
+    .testi-bottom {
       width: auto;
     }
-    h2{
+
+    h2 {
       font-size: 2.63rem;
     }
   }
 }
-.consultion{
+
+.consultion {
   height: 52.5rem;
   background: rgba(0, 0, 0, 0.5) url('../img/consult.jpg') no-repeat;
   background-size: cover;
   background-position: center center;
   background-blend-mode: overlay;
-  .container{
-    .form-wrapper{
-      
+
+  .container {
+    .form-wrapper {
+
       padding: 4.06rem 0;
-      .myform{
+
+      .myform {
         width: 18.88rem;
         margin: 0 auto;
         height: auto;
@@ -367,7 +430,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        h2{
+
+        h2 {
           font-weight: 600;
           font-size: 1.75rem;
           line-height: 1.75rem;
@@ -377,16 +441,19 @@
           padding-left: 2.31rem;
           margin-top: 1.88rem;
         }
-        input{
+
+        input {
           margin: 2.81rem 0 1.44rem;
           padding-bottom: 1.13rem;
           border: none;
           border-bottom: 1px solid #B8B8B8;
         }
-        .textarea{
+
+        .textarea {
           padding-bottom: 8.19rem;
         }
-        button{
+
+        button {
           margin-bottom: 2.63rem;
         }
       }
@@ -394,13 +461,14 @@
   }
 }
 
-@include responsive($md){
-  .consultion{
-    .container{
-      .form-wrapper{
-        .myform{
+@include responsive($md) {
+  .consultion {
+    .container {
+      .form-wrapper {
+        .myform {
           width: 37.38rem;
-          input{
+
+          input {
             width: 32.19rem;
           }
         }
@@ -408,54 +476,67 @@
     }
   }
 }
-footer{
+
+footer {
   background: $primary-color;
   color: rgb(228, 228, 228);
-  .container{
+
+  .container {
     padding-top: 2.5rem;
-    h2{
+
+    h2 {
       font-size: 1.5rem;
       font-weight: 600;
       margin: 3rem 0;
     }
-    ul{
-      li{
+
+    ul {
+      li {
         margin-bottom: 1.5rem;
-        a{
-          color:rgb(228, 228, 228);
+
+        a {
+          color: rgb(228, 228, 228);
         }
       }
     }
-    .about-footer{
+
+    .about-footer {
       margin-bottom: 4.06rem;
-      .footer-logo{
+
+      .footer-logo {
         width: 7rem;
         margin-bottom: 2.25rem;
       }
-      p{
+
+      p {
         font-size: 1rem;
         line-height: 1.5rem;
         letter-spacing: 0.045em;
         margin-bottom: 2.25rem;
         max-width: 22.19rem;
       }
-      .footer-social{
+
+      .footer-social {
         display: flex;
         gap: 2rem;
       }
     }
-    .contact-info{
-      .contact-box{
+
+    .contact-info {
+      .contact-box {
         display: flex;
         align-items: flex-start;
         gap: 1rem;
         margin-bottom: 1.5rem;
-        .contact-info-text{
+
+        .contact-info-text {
           width: 12.69rem;
-          p{
+
+          p {
             margin-bottom: 0.88rem;
             line-height: 1.25rem;
-            a{
+
+            a {
               color: rgb(228, 228, 228);
             }
           }
@@ -463,35 +544,28 @@ footer{
       }
     }
   }
-  .copyright{
+
+  .copyright {
     font-size: 0.88rem;
     text-align: center;
     width: 14.19rem;
     margin: 0 auto;
     color: #d7d7d7;
     padding-bottom: 1.63rem;
-    padding-top: 3.5rem;  
-    a{
+    padding-top: 3.5rem;
+
+    a {
       color: #d7d7d7;
     }
   }
 }
 
 
-@include responsive($md){
-  footer{
-    
-    .copyright{
+@include responsive($md) {
+  footer {
+
+    .copyright {
       width: auto;
     }
   }
 }
-
-
-
-
-
-
-
-
-
