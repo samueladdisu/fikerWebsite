@@ -12,7 +12,8 @@ if (isset($_GET['p_id'])) {
   while ($row = mysqli_fetch_assoc($result)) {
     $pro_id = $row['pro_id'];
     $pro_title = $row['pro_title'];
-    $pro_image = $row['pro_img'];
+    $pro_desc = $row['pro_desc'];
+    $pro_year = $row['pro_year'];
     $pro_pdf = $row['pro_pdf'];
     $pro_date = $row['pro_date'];
   }
@@ -20,9 +21,8 @@ if (isset($_GET['p_id'])) {
 if (isset($_POST['update_proclamation'])) {
   $pro_title = escape($_POST['pro_title']);
 
-
-  $pro_img = $_FILES['pro_img']['name'];
-  $pro_image_temp = $_FILES['pro_img']['tmp_name'];
+  $pro_desc = escape($_POST['pro_desc']);
+  $pro_year= escape($_POST['pro_year']);
 
   
   $pro_pdf = $_FILES['pro_pdf']['name'];
@@ -30,18 +30,11 @@ if (isset($_POST['update_proclamation'])) {
 
   $pro_date = date('d-m-y');
 
-  move_uploaded_file($pro_image_temp, "../pro_img/$pro_img");
+
   move_uploaded_file($pro_pdf_temp, "../pro_pdf/$pro_pdf");
-  if (empty($pro_image) || empty($pro_pdf)) {
-    $image_query = "SELECT * FROM proclamation WHERE pro_id = $p_id ";
-    $selected_image = mysqli_query($connection, $image_query);
 
-    while ($row = mysqli_fetch_assoc($selected_image)) {
-      $pro_image = $row['pro_img'];
-    }
-  }
 
-  $query = "UPDATE `proclamation` SET `pro_title` = '$pro_title', `pro_img` = '$pro_img', `pro_pdf` = '$pro_pdf' WHERE `proclamation`.`pro_id` = $p_id ";
+  $query = "UPDATE `proclamation` SET `pro_title` = '$pro_title', `pro_desc` = '$pro_desc', `pro_year` = '$pro_year', `pro_pdf` = '$pro_pdf' WHERE `proclamation`.`pro_id` = $p_id ";
 
   $update_proclamation = mysqli_query($connection, $query);
 
@@ -59,15 +52,14 @@ if (isset($_POST['update_proclamation'])) {
     <label for="title"> Proclamation Title</label>
     <input type="text" class="form-control" value="<?php echo $pro_title; ?>" name="pro_title">
   </div>
-
-
-  
   <div class="form-group">
-    <label for="post_image"> Proclamation Image</label>
+    <label for="title"> Proclamation Description</label>
+    <input type="text" class="form-control" value="<?php echo $pro_desc; ?>" name="pro_desc">
+  </div>
 
-    <img width="100" src="../pro_img/<?php echo $pro_image ?>" style="display: block; margin-bottom: 1rem;" alt="">
-
-    <input type="file" name="pro_img">
+  <div class="form-group">
+    <label for="title"> Proclamation Year</label>
+    <input type="text" class="form-control" value="<?php echo $pro_year; ?>" name="pro_year">
   </div>
 
   <div class="form-group">

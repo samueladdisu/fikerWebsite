@@ -10,16 +10,21 @@ $result = mysqli_query($connection, $query);
 while ($row = mysqli_fetch_assoc($result)) {
   $pro_id = $row['pro_id'];
   $pro_title = $row['pro_title'];
-  $pro_img = $row['pro_img'];
+  $pro_desc = $row['pro_desc'];
   $pro_pdf = $row['pro_pdf'];
+  $pro_year= $row['pro_year'];
   $pro_date = $row['pro_date'];
 ?>
-  <div class="single-blog">
-    <img src="./pro_img/<?php echo $pro_img; ?>" alt="blog desc" class="blog-img" />
+  <div class="single-blog" data-id="<?php echo $pro_year;  ?>">
+   
     <div class="blog-content">
       <h2 class="blog-content-title">
         <?php echo $pro_title; ?>
+       
       </h2>
+      <p class="blog-content-desc">
+      <?php echo $pro_desc; ?>
+      </p>
 
       <p class="blog-text">
         <?php //echo $post_content; ?>
@@ -27,6 +32,7 @@ while ($row = mysqli_fetch_assoc($result)) {
        <a href="./pro_pdf/<?php echo $pro_pdf; ?>" download>Download Proclamation
         <img src="./img/right-arrow.svg" alt="" />
       </a> 
+      
       <?php 
       
       //echo '<a href="download.php?file=' . urlencode($pro_pdf) . '">Download Proclamation</a>';

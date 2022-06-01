@@ -1,5 +1,10 @@
-@include header(blog, url("../img/blog.jpg"), 50vh, rgba(0, 0, 0, 0.28));
+@include header(blog, url("../img/banner.jpg"), 50vh, rgba(0, 0, 0, 0.28));
 
+.blog-div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .ip{
   .blog-title {
     font-size: 1.75rem;
@@ -270,7 +275,7 @@
 .ip-cta{
   height: 17.1875rem;
   margin-bottom: 4.75rem;
-  background: rgba(0,0,0,0.6) url('../img/reco-bg.jpg') no-repeat;
+  background: rgba(0,0,0,0.6) url('../img/banner.jpg') no-repeat;
   background-size: cover;
   background-position: center center;
   background-blend-mode: overlay;

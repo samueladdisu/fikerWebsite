@@ -3,7 +3,8 @@
     <tr>
       <th>Id</th>
       <th>Title</th>
-      <th>Image</th>
+      <th>Description</th>
+      <th>Year</th>
       <th>Attachment</th>
       <th>Date</th>
     </tr>
@@ -18,15 +19,16 @@
     while ($row = mysqli_fetch_assoc($result)) {
       $pro_id = $row['pro_id'];
       $pro_title = $row['pro_title'];
-      $pro_img = $row['pro_img'];
+      $pro_desc = $row['pro_desc'];
+      $pro_year= $row['pro_year'];
       $pro_pdf = $row['pro_pdf'];
       $pro_date = $row['pro_date'];
    
       echo "<tr>";
       echo "<td>{$pro_id}</td>";
       echo "<td>{$pro_title}</td>";
-      echo "<td><img width='100' src='../pro_img/{$pro_img}'></td>";
-  
+      echo "<td>{$pro_desc}</td>";
+      echo "<td>{$pro_year}</td>";
       echo "<td> $pro_pdf</td>";
       echo "<td>$pro_date</td>";
       echo "<td><a href='proclamations.php?source=edit_proclamation&p_id=$pro_id'>Edit</a></td>";

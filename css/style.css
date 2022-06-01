@@ -811,7 +811,7 @@ body {
 
 .about-header {
   position: relative;
-  height: 60vh;
+  height: 50vh;
 }
 
 .about-banner {
@@ -1000,7 +1000,13 @@ nav .container .nav-header .menu {
 
 .ourstory .container .about-img img {
   width: 30rem;
-  border-radius: 3rem;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 992px) {
+  .ourstory .container .about-img img {
+    width: 50rem;
+  }
 }
 
 .ourstory .container .about-text {
@@ -1050,6 +1056,26 @@ nav .container .nav-header .menu {
   margin-bottom: 6.88rem;
 }
 
+.team .container {
+  display: grid;
+  place-items: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .team .container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team .container {
+    gap: 16rem;
+  }
+}
+
 .team .container .single-team {
   display: flex;
   flex-direction: column;
@@ -1063,6 +1089,7 @@ nav .container .nav-header .menu {
 }
 
 .team .container .single-team .team-name {
+  text-align: center;
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
@@ -1071,6 +1098,161 @@ nav .container .nav-header .menu {
   margin-top: 1rem;
   display: flex;
   gap: 0.88rem;
+}
+
+.team .container .attorney-details {
+  background: #817E9F;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .team .container .attorney-details {
+    padding: 2rem;
+  }
+}
+
+.team .container .attorney-details .btn-container {
+  background: #fff;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 5.19rem;
+  display: flex;
+}
+
+.team .container .attorney-details .btn-container button {
+  background: transparent;
+  border: none;
+  width: 100%;
+  padding: 1.19rem 0.19rem;
+  color: #490048;
+}
+
+.team .container .attorney-details .btn-container button:first-child {
+  border-top-left-radius: 5.19rem;
+  border-bottom-left-radius: 5.19rem;
+}
+
+.team .container .attorney-details .btn-container button:last-child {
+  border-top-right-radius: 5.19rem;
+  border-bottom-right-radius: 5.19rem;
+}
+
+.team .container .attorney-details .btn-container .active {
+  background: #5D005B;
+  color: #fff;
+}
+
+.team .container .attorney-details .attorney-content {
+  color: #fff;
+}
+
+.team .container .attorney-details .attorney-content .profile,
+.team .container .attorney-details .attorney-content .experience,
+.team .container .attorney-details .attorney-content .education {
+  display: none;
+}
+
+.team .container .attorney-details .attorney-content .show {
+  display: block;
+}
+
+.team .container .attorney-details .attorney-content .profile {
+  margin-top: 4.56rem;
+}
+
+.team .container .attorney-details .attorney-content .profile p .intro-link {
+  color: #817E9F;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.team .container .attorney-details .attorney-content .profile p .intro-link:hover {
+  text-decoration: underline;
+}
+
+.team .container .attorney-details .attorney-content .experience {
+  margin-top: 4.56rem;
+}
+
+.team .container .attorney-details .attorney-content .experience div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.team .container .attorney-details .attorney-content .experience div li {
+  line-height: normal;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.94rem;
+}
+
+.team .container .attorney-details .attorney-content .experience p .intro-link {
+  color: #817E9F;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.team .container .attorney-details .attorney-content .experience p .intro-link:hover {
+  text-decoration: underline;
+}
+
+.team .container .attorney-details .attorney-content .education {
+  margin-top: 4.56rem;
+}
+
+.team .container .attorney-details .attorney-content .education .edu-title,
+.team .container .attorney-details .attorney-content .education .admission-title {
+  margin-bottom: 1.8rem;
+}
+
+.team .container .attorney-details .attorney-content .education ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.team .container .attorney-details .attorney-content .education ul .uni-name div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.team .container .attorney-details .attorney-content .education ul .uni-name div li {
+  line-height: normal;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.94rem;
+}
+
+.team .container .attorney-details .attorney-content .education ul .uni-logo .logo-uni {
+  width: 10rem;
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+  text-align: right;
+}
+
+.team .container .attorney-details .attorney-content .education ul .uni-logo .logo-uni:last-child {
+  width: 7rem;
+}
+
+.team .container .attorney-details .attorney-content .education .admission {
+  display: flex;
+  flex-direction: column;
+}
+
+.team .container .attorney-details .attorney-content .education .admission div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.team .container .attorney-details .attorney-content .education .admission div li {
+  line-height: normal;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.94rem;
 }
 
 .contact-header {
@@ -1086,7 +1268,7 @@ nav .container .nav-header .menu {
   top: 0;
   bottom: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.4) url("../img/map.jpg") no-repeat;
+  background: rgba(0, 0, 0, 0.4) url("../img/banner2.jpg") no-repeat;
   background-position: center center;
   background-size: cover;
   background-blend-mode: overlay;
@@ -1769,7 +1951,7 @@ nav .container .nav-header .menu {
   top: 0;
   bottom: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.28) url("../img/blog.jpg") no-repeat;
+  background: rgba(0, 0, 0, 0.28) url("../img/banner.jpg") no-repeat;
   background-position: center center;
   background-size: cover;
   background-blend-mode: overlay;
@@ -1787,7 +1969,7 @@ nav .container .nav-header .menu {
   top: 0;
   bottom: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.28) url("../img/blog.jpg") no-repeat;
+  background: rgba(0, 0, 0, 0.28) url("../img/banner.jpg") no-repeat;
   background-position: center right;
   background-size: cover;
   background-blend-mode: overlay;
@@ -1946,12 +2128,26 @@ nav .container .nav-header .menu {
   }
 }
 
+.hide {
+  display: none;
+}
+
 .blog .blog-title {
   font-size: 1.75rem;
   font-weight: 600;
   color: #490048;
   width: 90%;
   margin: 1.75rem auto 3.5rem;
+}
+
+.blog .header-pro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.blog .dropdown-content-bond {
+  padding: 2px;
 }
 
 .blog .container .blog-container .single-blog, .blog .container .blog-container .single-bloger {
@@ -2223,7 +2419,7 @@ nav .container .nav-header .menu {
 
 .recognition {
   height: 17.1875rem;
-  background: rgba(0, 0, 0, 0.5) url("../img/reco-bg.jpg") no-repeat;
+  background: rgba(0, 0, 0, 0.5) url("../img/banner.jpg") no-repeat;
   background-size: cover;
   background-position: center center;
   background-blend-mode: overlay;
@@ -2262,7 +2458,7 @@ nav .container .nav-header .menu {
   top: 0;
   bottom: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.28) url("../img/blog.jpg") no-repeat;
+  background: rgba(0, 0, 0, 0.28) url("../img/banner.jpg") no-repeat;
   background-position: center center;
   background-size: cover;
   background-blend-mode: overlay;
@@ -2280,7 +2476,7 @@ nav .container .nav-header .menu {
   top: 0;
   bottom: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.28) url("../img/blog.jpg") no-repeat;
+  background: rgba(0, 0, 0, 0.28) url("../img/banner.jpg") no-repeat;
   background-position: center right;
   background-size: cover;
   background-blend-mode: overlay;
@@ -2437,6 +2633,12 @@ nav .container .nav-header .menu {
   .nav .container .links-container .nav-links li .black {
     color: #000;
   }
+}
+
+.blog-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .ip .blog-title {
@@ -2722,7 +2924,7 @@ nav .container .nav-header .menu {
 .ip-cta {
   height: 17.1875rem;
   margin-bottom: 4.75rem;
-  background: rgba(0, 0, 0, 0.6) url("../img/reco-bg.jpg") no-repeat;
+  background: rgba(0, 0, 0, 0.6) url("../img/banner.jpg") no-repeat;
   background-size: cover;
   background-position: center center;
   background-blend-mode: overlay;
@@ -2767,7 +2969,7 @@ nav .container .nav-header .menu {
   top: 0;
   bottom: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.28) url("../img/tax.jpg") no-repeat;
+  background: rgba(0, 0, 0, 0.28) url("../img/banner.jpg") no-repeat;
   background-position: center center;
   background-size: cover;
   background-blend-mode: overlay;
@@ -3531,7 +3733,7 @@ nav .container .nav-header .menu {
 
 .recognition {
   height: 17.1875rem;
-  background: rgba(0, 0, 0, 0.5) url("../img/reco-bg.jpg") no-repeat;
+  background: rgba(0, 0, 0, 0.5) url("../img/banner.jpg") no-repeat;
   background-size: cover;
   background-position: center center;
   background-blend-mode: overlay;
@@ -3540,9 +3742,16 @@ nav .container .nav-header .menu {
 .recognition .container .reco {
   padding-top: 6.25rem;
   color: #fff;
-  display: flex;
-  align-items: center;
+  display: grid;
+  place-items: left;
   gap: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .recognition .container .reco {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .recognition .container .reco .reco-text h2 {

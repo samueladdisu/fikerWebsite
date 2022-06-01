@@ -175,7 +175,7 @@ function head(bannerClass) {
         item.classList.add('black')
       })
       down.setAttribute('src', './img/dropdown-black.svg')
-      logo.innerHTML = `<a href="./index.html"><img src="./img/second_logo.svg" alt="Battery World Logo"></a>`
+      logo.innerHTML = `<a href="./index.html"><img src="./img/fiker_logo.svg" alt="Battery World Logo"></a>`
       nav.classList.add('fixed-nav')
     } else {
       logo.innerHTML = `<a href="./index.html"><img src="./img/fiker_logo.svg" alt="Fiker legal service Logo" /> </a>`
@@ -247,8 +247,7 @@ function foot() {
       <li><a href="./contract.html">Contract</a></li>
       <li><a href="./commercial.html">Commercial and Bussiness</a></li>
       <li><a href="./ip.html">Intellectual Property</a></li>
-      <li><a href="./insurance.html">Insurance</a></li>
-      <li><a href="./transport.html">Transport</a></li>
+    
       </ul>
     </div>
 

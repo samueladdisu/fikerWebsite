@@ -33,9 +33,22 @@
         </form>
 
         <h2>Recent</h2>
-
         <div class="recent-blog">
-          <img src="./post_img/blogpic.jpg" alt="" />
+          <img src="./img/family1.jpg" alt="" />
+          <div class="recent-inner">
+            <h3 class="recent-blog-title">Other Blog Title</h3>
+            <p>May, 27th 2021</p>
+          </div>
+        </div>
+        <div class="recent-blog">
+          <img src="./img/constraction.jpg" alt="" />
+          <div class="recent-inner">
+            <h3 class="recent-blog-title">Other Blog Title</h3>
+            <p>May, 27th 2021</p>
+          </div>
+        </div>
+        <div class="recent-blog">
+          <img src="./img/employee.jpg" alt="" />
           <div class="recent-inner">
             <h3 class="recent-blog-title">Other Blog Title</h3>
             <p>May, 27th 2021</p>
@@ -43,23 +56,7 @@
         </div>
 
         <div class="recent-blog">
-          <img src="./post_img/blogpic2.jpg" alt="" />
-          <div class="recent-inner">
-            <h3 class="recent-blog-title">Other Blog Title</h3>
-            <p>May, 27th 2021</p>
-          </div>
-        </div>
-
-        <div class="recent-blog">
-          <img src="./post_img/blogpic3.jpg" alt="" />
-          <div class="recent-inner">
-            <h3 class="recent-blog-title">Other Blog Title</h3>
-            <p>May, 27th 2021</p>
-          </div>
-        </div>
-
-        <div class="recent-blog">
-          <img src="./post_img/blogpic.jpg" alt="" />
+          <img src="./img/contrat.png" alt="" />
           <div class="recent-inner">
             <h3 class="recent-blog-title">Other Blog Title</h3>
             <p>May, 27th 2021</p>

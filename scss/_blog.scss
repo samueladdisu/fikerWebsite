@@ -1,5 +1,7 @@
-@include header(blog, url("../img/blog.jpg"), 50vh, rgba(0, 0, 0, 0.28));
-
+@include header(blog, url("../img/banner.jpg"), 50vh, rgba(0, 0, 0, 0.28));
+.hide{
+  display: none;
+}
 .blog {
   .blog-title {
     font-size: 1.75rem;
@@ -7,6 +9,17 @@
     color: $primary-color;
     width: 90%;
     margin: 1.75rem auto 3.5rem;
+  }
+  .header-pro{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  // .dropdown-content-bond{
+  //   display: none;
+  // }
+  .dropdown-content-bond{
+    padding: 2px;
   }
   .container {
     .blog-container{
@@ -265,7 +278,7 @@
 
 .recognition{
   height: 17.1875rem;
-  background: rgba(0,0,0,0.5) url('../img/reco-bg.jpg') no-repeat;
+  background: rgba(0,0,0,0.5) url('../img/banner.jpg') no-repeat;
   background-size: cover;
   background-position: center center;
   background-blend-mode: overlay;
@@ -291,3 +304,4 @@
     }
   }
 }
+
