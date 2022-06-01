@@ -28,11 +28,11 @@ if (isset($_POST['create_proclamation'])) {
 
 <form action="" method="POST" class="col-6" enctype="multipart/form-data">
 
-  <div class="form-group">
+  <div class="form-group font-amh">
     <label for="title"> Proclamation Title</label>
     <input type="text" class="form-control" name="pro_title">
   </div>
-  <div class="form-group">
+  <div class="form-group font-amh">
     <label for="title"> Proclamation Description</label>
     <input type="text" class="form-control" name="pro_desc">
   </div>
@@ -40,7 +40,7 @@ if (isset($_POST['create_proclamation'])) {
     <label for="title"> Proclamation Year</label>
     <input type="text" class="form-control" name="pro_year">
   </div>
-  <div class="form-group">
+  <div class="form-group font-amh">
     <label for="post_image"> Proclamation Attachment</label>
     <input type="file" name="pro_pdf">
   </div>

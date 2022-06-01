@@ -3518,12 +3518,21 @@ nav .container .nav-header .menu {
   }
 }
 
+@font-face {
+  font-family: 'amh';
+  src: url("../css/AbyssinicaSIL-Regular.woff");
+}
+
 .hero {
   height: 100%;
   width: 100%;
   display: grid;
   place-items: center;
   text-align: center;
+}
+
+.font-amh {
+  font-family: 'amh';
 }
 
 .headline {

@@ -53,7 +53,13 @@ html {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-
+@font-face {
+  font-family: 'amh';
+  src: url('../css/AbyssinicaSIL-Regular.woff');
+}
+.font-amh{
+  font-family: 'amh';
+}
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }

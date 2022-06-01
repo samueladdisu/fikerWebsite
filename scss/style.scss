@@ -10,7 +10,10 @@
 @import "payment";
 
 @include header(home, url('../img/court.jpg'), 90vh, rgba(0, 0, 0, 0.58));
-
+@font-face {
+  font-family: 'amh';
+  src: url('../css/AbyssinicaSIL-Regular.woff');
+}
 .hero {
   height: 100%;
   width: 100%;
@@ -18,7 +21,9 @@
   place-items: center;
   text-align: center;
 }
-
+.font-amh{
+  font-family: 'amh';
+}
 .headline {
   z-index: 999999;
   display: grid;

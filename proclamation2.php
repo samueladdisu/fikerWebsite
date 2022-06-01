@@ -43,7 +43,7 @@
 
 
     <div class="container row">
-      <main class="blog-container dropdown-content-bond col-md-7 col-lg-6 col-xl-8">
+      <main class="blog-container dropdown-content-bond font-amh col-md-7 col-lg-6 col-xl-8">
     <?php include './includes/proclamations.php'; ?>
       </main>
    
