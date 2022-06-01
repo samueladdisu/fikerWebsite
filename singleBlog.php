@@ -73,25 +73,19 @@
 
                 <form action="" class="myform" method="POST">
                   <h2>Leave a Comment</h2>
-
                   <input type="text" name="comment_author" id="" placeholder="Your Name" required />
                   <input type="email" name="comment_email" id="" placeholder="Your Email" required />
                   <input type="text" name="comment_content" class="textarea" placeholder="Your Comment" required />
-
                   <button type="submit" name="create_comment" class="btn btn-outline-primary">
                     Submit
                   </button>
                 </form>
-
                 <?php
-
                 $query = "SELECT * FROM comments WHERE comment_post_id = $post_id AND comment_status = 'approved' ORDER BY comment_id DESC";
                 $select_comment_query = mysqli_query($connection, $query);
-
                 if (!$select_comment_query) {
                   die('QUERY FAILED ' . mysqli_error($connection));
                 }
-
                 while ($row = mysqli_fetch_assoc($select_comment_query)) {
                   $comment_date = $row['comment_date'];
                   $comment_content = $row['comment_content'];
@@ -99,7 +93,6 @@
                 ?>
                   <div class="comment-section">
                     <div class="c_wrapper">
-
                       <img src="./img/avatar.svg" alt="" class="comment_img">
                       <div class="comment-content">
                         <h3 class="name"><?php echo $comment_author; ?> <div class="dot"></div> <small><?php echo $comment_date; ?> </small></h3>
@@ -110,7 +103,6 @@
                     </div>
                     <div class="comment-bottom"></div>
                   </div>
-
                 <?php } ?>
               
 

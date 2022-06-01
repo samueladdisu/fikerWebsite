@@ -17,16 +17,16 @@ while ($row = mysqli_fetch_assoc($result)) {
 ?>
   <div class="single-blog" data-id="<?php echo $pro_year;  ?>">
    
-    <div class="blog-content">
-      <h2 class="blog-content-title">
+    <div class="blog-content ">
+      <h2 class="blog-content-title font-amh">
         <?php echo $pro_title; ?>
        
       </h2>
-      <p class="blog-content-desc">
+      <p class="blog-content-desc font-amh">
       <?php echo $pro_desc; ?>
       </p>
 
-      <p class="blog-text">
+      <p class="blog-text ">
         <?php //echo $post_content; ?>
       </p>
        <a href="./pro_pdf/<?php echo $pro_pdf; ?>" download>Download Proclamation

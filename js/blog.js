@@ -29,9 +29,7 @@ foot()
 
 const selected = document.querySelector('#search-select')
 const blogContent = document.querySelectorAll('.single-blog')
-
-selected.addEventListener('click', () => {
-    
+selected.addEventListener('click', () => {  
     blogContent.forEach(blog => {
       let id = blog.dataset.id
       blog.style.display = 'none'
