@@ -1,5 +1,5 @@
 <?php
-$connection = mysqli_connect('localhost','fikirlawcom_Sam','8+(B^=e3eKu$','fikirlawcom_proclamation');
+$connection = mysqli_connect('localhost','fikirlawcom_Sam','(0PS(eadm2}+','fikirlawcom_proclamation');
 // $connection = mysqli_connect('localhost','root','','fikirlawcom_proclamation');
 
 if (!$connection) {
