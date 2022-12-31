@@ -19,22 +19,20 @@ function head(bannerClass) {
            <li class="drop-down">
            <a href="#" class="scroll-link solution"> Practice Areas <span><img src="./img/dropdown.svg" class="down-icon"></span>  </a>
            <ul class="drop-down-link">
+              <li><a href="./ip.html">Intellectual Property</a></li> 
                <li><a href="./family.html">Family</a></li>
+               <li><a href="./commercial.html">Corporate & Commercial Law</a></li>
+               <li><a href="./employee.html">Employment Law</a></li>
                <li><a href="./succession.html">Succession</a></li>
-               <li><a href="./employee.html">Employee and Employment</a></li>
-               <li><a href="./construction.html">Construction</a></li>
-               <li><a href="./contract.html">Contract</a></li>
-               <li><a href="./commercial.html">Commercial and Bussiness</a></li>
-               <li><a href="./ip.html">Intellectual Property</a></li>
+               <li><a href="./contract.html">Tax</a></li>
                <li><a href="./insurance.html">Insurance</a></li>
-               <li><a href="./transport.html">Transport</a></li>
            </ul>
        
        </li>
            <li>
              <a href="./careers.html" class="scroll-link">Careers</a>
            </li>
-           <li><a href="./proclamation.php" class="scroll-link">Blog</a></li>
+           
            <li><a href="./proclamation2.php" class="scroll-link">Proclamations</a></li>
            <li><a href="./contact.html" class="scroll-link">Contact</a></li>
          </ul>
@@ -77,22 +75,20 @@ function head(bannerClass) {
             <li class="drop-down">
            <a href="#" class="scroll-link solution"> Practice Areas <span><img src="./img/dropdown.svg" class="down-icon"></span>  </a>
            <ul class="drop-down-link">
+           <li><a href="./ip.html">Intellectual Property</a></li> 
            <li><a href="./family.html">Family</a></li>
+           <li><a href="./commercial.html">Corporate & Commercial Law</a></li>
+           <li><a href="./employee.html">Employment Law</a></li>
            <li><a href="./succession.html">Succession</a></li>
-           <li><a href="./employee.html">Employee and Employment</a></li>
-           <li><a href="./construction.html">Construction</a></li>
-           <li><a href="./contract.html">Contract</a></li>
-           <li><a href="./commercial.html">Commercial and Bussiness</a></li>
-           <li><a href="./ip.html">Intellectual Property</a></li>
+           <li><a href="./contract.html">Tax</a></li>
            <li><a href="./insurance.html">Insurance</a></li>
-           <li><a href="./transport.html">Transport</a></li>
        </ul>
    
        </li>
             <li>
               <a href="./careers.html" class="scroll-link">Careers</a>
             </li>
-            <li><a href="./proclamation.php" class="scroll-link">Blog</a></li>
+            
             <li><a href="./proclamation2.php" class="scroll-link">Proclamations</a></li>
             <li><a href="./contact.html" class="scroll-link">Contact</a></li>
           </ul>
@@ -127,15 +123,13 @@ function head(bannerClass) {
            <li class="drop-down">
            <a href="#" class="scroll-link solution"> Practice Areas <span><img src="./img/dropdown.svg" class="down-icon"></span>  </a>
            <ul class="drop-down-link">
+           <li><a href="./ip.html">Intellectual Property</a></li> 
            <li><a href="./family.html">Family</a></li>
+           <li><a href="./commercial.html">Corporate & Commercial Law</a></li>
+           <li><a href="./employee.html">Employment Law</a></li>
            <li><a href="./succession.html">Succession</a></li>
-           <li><a href="./employee.html">Employee and Employment</a></li>
-           <li><a href="./construction.html">Construction</a></li>
-           <li><a href="./contract.html">Contract</a></li>
-           <li><a href="./commercial.html">Commercial and Bussiness</a></li>
-           <li><a href="./ip.html">Intellectual Property</a></li>
+           <li><a href="./contract.html">Tax</a></li>
            <li><a href="./insurance.html">Insurance</a></li>
-           <li><a href="./transport.html">Transport</a></li>
        </ul>
    
        
@@ -143,7 +137,7 @@ function head(bannerClass) {
            <li>
              <a href="./careers.html" class="scroll-link">Careers</a>
            </li>
-           <li><a href="./proclamation.php" class="scroll-link">Blog</a></li>
+           
            <li><a href="./proclamation2.php" class="scroll-link">Proclamations</a></li>
            <li><a href="./contact.html" class="scroll-link">Contact</a></li>
          </ul>
@@ -230,7 +224,7 @@ function foot() {
         <li><a href="./index.html">Home</a></li>
         <li><a href="./about.html">About</a></li>
         <li><a href="./careers.html">Careers</a></li>
-        <li><a href="./proclamation.php" class="scroll-link">Blog</a></li>
+        
         <li><a href="./proclamation2.php" class="scroll-link">Proclamations</a></li>
         <li><a href="./contact.html">Contact</a></li>
       </ul>
@@ -240,13 +234,13 @@ function foot() {
       <h2>Practice Areas</h2>
 
       <ul>
+      <li><a href="./ip.html">Intellectual Property</a></li> 
       <li><a href="./family.html">Family</a></li>
+      <li><a href="./commercial.html">Corporate & Commercial Law</a></li>
+      <li><a href="./employee.html">Employment Law</a></li>
       <li><a href="./succession.html">Succession</a></li>
-      <li><a href="./employee.html">Employee and Employment</a></li>
-      <li><a href="./construction.html">Construction</a></li>
-      <li><a href="./contract.html">Contract</a></li>
-      <li><a href="./commercial.html">Commercial and Bussiness</a></li>
-      <li><a href="./ip.html">Intellectual Property</a></li>
+      <li><a href="./contract.html">Tax</a></li>
+      <li><a href="./insurance.html">Insurance</a></li>
     
       </ul>
     </div>
@@ -294,7 +288,7 @@ function foot() {
     </div>
   </div>
   <p class="copyright">
-    CopyRight 2021. Designed By
+    CopyRight 2022. Designed By
     <a href="https://www.versavvymedia.com/">Versavvy Media PLC</a>
   </p>`
 }

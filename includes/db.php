@@ -1,6 +1,6 @@
 <?php
-$connection = mysqli_connect('localhost','fikirlawcom_Sam','(0PS(eadm2}+','fikirlawcom_proclamation');
-// $connection = mysqli_connect('localhost','root','','fikirlawcom_proclamation');
+// $connection = mysqli_connect('localhost','fikirlawcom_Sam','(0PS(eadm2}+','fikirlawcom_proclamation');
+$connection = mysqli_connect('localhost','root','','fikirlawcom_proclamation');
 
 if (!$connection) {
     echo "Error: Unable to connect to MySQL." . PHP_EOL;
