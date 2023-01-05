@@ -44,7 +44,7 @@ function head(bannerClass) {
    <div class="container hero">
    <div class="headline">
      <h1 class="title">
-     ABOUT FIKIR LEGAL SERVICE 
+      FIKIR LEGAL SERVICE 
      </h1>
      <p class="subtitle">
      Fikir legal service has been established on 2016. By MS. Fikir Mulugeta Gebrewold The past five year we are dealing with different civil and criminal cases 
