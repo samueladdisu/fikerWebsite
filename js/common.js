@@ -1,5 +1,5 @@
 function head(bannerClass) {
-  const header = document.getElementById('header')
+  const header = document.getElementById("header")
 
   if (bannerClass == "home") {
     header.innerHTML = `<nav class="nav">
@@ -44,7 +44,7 @@ function head(bannerClass) {
    <div class="container hero">
    <div class="headline">
      <h1 class="title">
-     ABOUT FIKIR LEGAL SERVICE 
+     ABOUT FIKIR AND ASSOCIATES LEGAL SERVICE 
      </h1>
      <p class="subtitle">
      Fikir legal service has been established on 2016. By MS. Fikir Mulugeta Gebrewold The past five year we are dealing with different civil and criminal cases 
@@ -55,7 +55,7 @@ function head(bannerClass) {
    </div>
  </div>   
    </div>`
-  } else if (bannerClass == 'career') {
+  } else if (bannerClass == "career") {
     header.innerHTML = `<nav class="nav">
       <div class="container">
         <div class="nav-header">
@@ -150,52 +150,49 @@ function head(bannerClass) {
    </div>`
   }
 
-  const linksContainer = document.querySelector('.links-container');
-  const nav = document.querySelector('.nav');
-  const logo = document.querySelector('.logo');
-  const menu = document.querySelector('.menu');
-  const links = linksContainer.querySelectorAll('.nav-links li a')
-  menu.addEventListener('click', () => {
-
-    linksContainer.classList.toggle('show-links');
+  const linksContainer = document.querySelector(".links-container")
+  const nav = document.querySelector(".nav")
+  const logo = document.querySelector(".logo")
+  const menu = document.querySelector(".menu")
+  const links = linksContainer.querySelectorAll(".nav-links li a")
+  menu.addEventListener("click", () => {
+    linksContainer.classList.toggle("show-links")
   })
-  window.addEventListener('scroll', () => {
-    const navheight = nav.getBoundingClientRect().height;
-    const scorllheight = window.pageYOffset;
-    const down = document.querySelector('.down-icon')
+  window.addEventListener("scroll", () => {
+    const navheight = nav.getBoundingClientRect().height
+    const scorllheight = window.pageYOffset
+    const down = document.querySelector(".down-icon")
     if (scorllheight > navheight) {
       menu.innerHTML = ` <img src="./img/menu-black.svg" class="ham" alt="" />`
       links.forEach(item => {
-        item.classList.add('black')
+        item.classList.add("black")
       })
-      down.setAttribute('src', './img/dropdown-black.svg')
+      down.setAttribute("src", "./img/dropdown-black.svg")
       logo.innerHTML = `<a href="./index.html"><img src="./img/fiker_logo.svg" alt="Battery World Logo"></a>`
-      nav.classList.add('fixed-nav')
+      nav.classList.add("fixed-nav")
     } else {
       logo.innerHTML = `<a href="./index.html"><img src="./img/fiker_logo.svg" alt="Fiker legal service Logo" /> </a>`
-      nav.classList.remove('fixed-nav')
-      down.setAttribute('src', './img/dropdown.svg')
+      nav.classList.remove("fixed-nav")
+      down.setAttribute("src", "./img/dropdown.svg")
       menu.innerHTML = ` <img src="./img/menu-white.svg" class="ham" alt="" />`
       links.forEach(item => {
-        item.classList.remove('black')
+        item.classList.remove("black")
       })
     }
   })
-  const dropdown = document.querySelector('.drop-down')
-  const dropdownContent = document.querySelector('.drop-down-link')
+  const dropdown = document.querySelector(".drop-down")
+  const dropdownContent = document.querySelector(".drop-down-link")
 
-  dropdown.addEventListener('mouseenter', () => {
-
-    dropdownContent.classList.add('display-links')
+  dropdown.addEventListener("mouseenter", () => {
+    dropdownContent.classList.add("display-links")
   })
-  dropdown.addEventListener('mouseleave', () => {
-
-    dropdownContent.classList.remove('display-links')
+  dropdown.addEventListener("mouseleave", () => {
+    dropdownContent.classList.remove("display-links")
   })
 }
 
 function foot() {
-  const footer = document.getElementById('footer')
+  const footer = document.getElementById("footer")
   footer.innerHTML = ` <div class="container row">
     <div class="about-footer col-md-6 col-xl-4">
       <img src="./img/second_logo.svg" class="footer-logo" alt="" />
